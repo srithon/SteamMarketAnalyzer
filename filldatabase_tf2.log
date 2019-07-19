@@ -156,3 +156,89 @@
 20:38:32 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
 20:38:32 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
 20:38:32 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:43:01 INFO:root_logger	Starting script...
+20:43:11 INFO:root_logger	165.227.80.91:3128
+20:43:11 INFO:root_logger	165.227.83.163:3128
+20:43:11 INFO:root_logger	165.227.89.142:3128
+20:43:11 INFO:root_logger	67.205.189.71:3128
+20:43:11 INFO:root_logger	165.227.91.166:3128
+20:43:11 INFO:root_logger	165.227.91.41:3128
+20:43:11 INFO:root_logger	165.227.91.179:3128
+20:43:11 INFO:root_logger	134.209.57.21:3128
+20:43:11 INFO:root_logger	165.227.24.121:3128
+20:43:11 INFO:root_logger	12.189.125.89:39085
+20:43:11 INFO:root_logger	134.209.51.42:3128
+20:43:11 INFO:root_logger	67.60.137.219:35979
+20:43:12 INFO:root_logger	50.242.113.57:58619
+20:43:12 INFO:root_logger	69.65.65.178:30043
+20:43:12 INFO:root_logger	142.0.60.27:47322
+20:43:12 INFO:root_logger	178.128.75.148:3128
+20:43:12 INFO:root_logger	104.236.51.165:8080
+20:43:12 INFO:root_logger	192.99.191.239:1080
+20:43:12 INFO:root_logger	50.253.229.189:45725
+20:43:12 INFO:root_logger	192.99.191.235:1080
+20:43:33 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDA5B57F0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:43:36 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:43:57 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDA5BA358>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:44:08 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:44:21 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+20:44:26 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+20:44:31 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+20:45:06 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+20:45:17 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+20:45:20 ERROR:root_logger	'lowest_price'
+20:45:23 ERROR:root_logger	'lowest_price'
+20:45:25 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:25 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:31 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+20:45:54 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDA5785F8>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:45:56 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:57 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:57 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:57 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:45:57 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 502 Bad Gateway',)))
+20:46:20 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDA578C18>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:47:13 DEBUG:root_logger	Failed to get response. Retrying. item = Mayflower Cosmetic Case #102
+20:48:04 DEBUG:root_logger	Failed to get response. Retrying. item = Mayflower Cosmetic Case #102
+20:48:35 DEBUG:root_logger	Failed to get response. Retrying. item = Mayflower Cosmetic Case #102
+20:48:43 DEBUG:root_logger	Failed to get response. Retrying. item = Mayflower Cosmetic Case #102
+20:48:57 DEBUG:root_logger	Failed to get response. Retrying. item = Mayflower Cosmetic Case #102
+20:49:21 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDAE272B0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:49:44 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDAE27BE0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:49:46 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:50:07 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDAE276D8>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:50:07 DEBUG:root_logger	Used up all proxies! Refreshing
+20:50:18 INFO:root_logger	165.227.71.60:80
+20:50:18 INFO:root_logger	24.75.156.98:53281
+20:50:18 INFO:root_logger	159.203.153.71:80
+20:50:18 INFO:root_logger	18.191.95.234:3128
+20:50:18 INFO:root_logger	35.246.54.39:80
+20:50:18 INFO:root_logger	206.189.168.170:80
+20:50:18 INFO:root_logger	107.191.45.149:8118
+20:50:18 INFO:root_logger	142.93.113.20:80
+20:50:18 INFO:root_logger	192.241.223.145:80
+20:50:18 INFO:root_logger	208.67.183.240:80
+20:50:18 INFO:root_logger	31.220.63.167:80
+20:50:18 INFO:root_logger	50.197.139.163:36609
+20:50:18 INFO:root_logger	72.249.51.52:80
+20:50:42 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDAE3C400>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:51:05 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001CEDAE3CBA8>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+20:51:08 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Mayflower%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 500 Internal Server Error',)))
+20:51:14 ERROR:root_logger	'lowest_price'
+20:51:17 ERROR:root_logger	'lowest_price'
+20:51:21 ERROR:root_logger	'lowest_price'
+20:51:24 ERROR:root_logger	'lowest_price'
+20:51:31 ERROR:root_logger	'lowest_price'
+20:51:31 ERROR:root_logger	invalid input syntax for integer: "1,312"
+LINE 1: ...VALUES (NOW(), 'Winter 2018 Cosmetic Case #122', 3, '1,312')
+                                                               ^
+
+20:51:34 ERROR:root_logger	'lowest_price'
+20:51:34 ERROR:root_logger	current transaction is aborted, commands ignored until end of transaction block
+
+20:51:38 ERROR:root_logger	'lowest_price'
+20:51:38 ERROR:root_logger	current transaction is aborted, commands ignored until end of transaction block
+
+20:51:40 INFO:root_logger	Time passed - 482.8021490573883
+20:51:40 INFO:root_logger	Time passed - 482.8333992958069
+20:51:40 INFO:root_logger	Counter = 7

@@ -262,9 +262,11 @@ def main(delay):
                         query = 'INSERT INTO tf2(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
                         
                         try:
-                            volume = json['volume']
+                            volume = json['volume'].replace(',', '')
                         except KeyError as e:
                             volume = 0
+                            
+                        lowest_price = lowest_price.replace(',', '')
 
                         if verbose:
                             print(query % (item, price, volume))
