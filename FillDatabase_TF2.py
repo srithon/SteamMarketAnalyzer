@@ -1,8 +1,6 @@
 import requests
 
-import mysql.connector
-from mysql.connector import Error
-from mysql.connector import errorcode
+import psycopg2
 
 from time import sleep, time
 
@@ -54,10 +52,12 @@ logger.setLevel(logging.DEBUG)
 
 logger.info('Starting script...')
 
-connection = mysql.connector.connect(host='localhost',
-                             database='gametamedealfinder',
-                             user='root',
-                             password='LrD3FZGUz5JXy5c')
+with open('password.txt', 'r') as password_file:
+    connection = psycopg2.connect(host='localhost',
+                                 dbname='steammarket',
+                                 user='postgres',
+                                 password=password_file.read().rstrip(),
+                                 port=7538)
 
 cursor = connection.cursor(buffered=True)
 
