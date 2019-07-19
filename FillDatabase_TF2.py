@@ -2,7 +2,14 @@ import requests
 
 import psycopg2
 
+import mysql.connector
+from mysql.connector import Error
+from mysql.connector import errorcode
+from mysql.connector.errors import IntegrityError
+
 from time import sleep, time
+
+import math
 
 import logging
 
@@ -36,7 +43,7 @@ verbose = True
 log_formatter = logging.Formatter('%(asctime)s %(levelname)s:%(name)s\t%(message)s',
                                   datefmt='%H:%M:%S')
 
-log_handler = logging.FileHandler(filename='gametame_fill_market_data_tf2.log')
+log_handler = logging.FileHandler(filename='filldatabase_tf2.log')
 log_handler.setFormatter(log_formatter)
 
 log_handler.setLevel(logging.DEBUG)
@@ -59,7 +66,14 @@ with open('password.txt', 'r') as password_file:
                                  password=password_file.read().rstrip(),
                                  port=7538)
 
-cursor = connection.cursor(buffered=True)
+cursor = connection.cursor()
+
+mysql_connection = mysql.connector.connect(host='localhost',
+                             database='tf2metalvsmarketprice',
+                             user='root',
+                             password='LrD3FZGUz5JXy5c')
+
+mysql_cursor = mysqlConnection.cursor()
 
 proxy_page = 1
 
@@ -143,10 +157,15 @@ def get_proxy_dict(current_proxy):
 def refresh_database():
     global items
     # cursor.execute('SELECT ItemName FROM `item list steam market tf2 tf2` WHERE PriceValue IS NULL ORDER BY PointValue ASC')
-    cursor.execute('SELECT ItemName FROM `item list steam market tf2` WHERE PriceValue IS NOT NULL ORDER BY PointValue ASC')
+    mysql_cursor.execute('SELECT ItemName FROM `item list steam market tf2` WHERE PriceValue IS NOT NULL ORDER BY PointValue ASC')
     items.clear()
-    items = [item[0] for item in cursor.fetchall()]
+    items = [item[0] for item in mysql_cursor.fetchall()]
 
+def close_mysql_connection():
+    if mysql_connection.is_connected():
+        mysql_connection.commit()
+        mysql_connection.close()
+        mysql_cursor.close()
 
 def shutdown():
     global s
@@ -188,6 +207,7 @@ def main(delay):
         broken = True
 
         refresh_database()
+        close_mysql_connection()
         
         while broken:
             broken = False
@@ -234,21 +254,18 @@ def main(delay):
                                 item = items[0]
                                 sleep(delay)
                                 continue
-                        price = float(lowest_price)
-                        query = 'UPDATE `ITEM LIST STEAM MARKET TF2` SET PriceValue = %s, TimeUpdated = now()'
+                        price = floor(float(lowest_price) * 100)
+                        query = 'INSERT INTO tf2(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
                         
                         try:
                             volume = json['volume']
-                            query += ', Volume = {}'.format(volume)
                         except KeyError as e:
-                            pass
-                        
-                        query += ' WHERE ItemName = %s'
+                            volume = 0
 
                         if verbose:
                             print(query % (price, item))
 
-                        cursor.execute(query, (price, item))
+                        cursor.execute(query, (item, price, volume))
                     except Exception as e:
                         try:
                             print('Error in {}'.format(query))
