@@ -307,6 +307,7 @@ def main(delay):
                     
                     if failures > 3:
                         proxy_dict = get_proxy_dict(get_new_proxy())
+                        print('4 failures; switching proxies')
                         failures = 0
                     else:
                         failures += 1
