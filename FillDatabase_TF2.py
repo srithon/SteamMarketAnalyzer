@@ -157,7 +157,7 @@ def get_proxy_dict(current_proxy):
 def refresh_database():
     global items
     # cursor.execute('SELECT ItemName FROM `item list steam market tf2 tf2` WHERE PriceValue IS NULL ORDER BY PointValue ASC')
-    mysql_cursor.execute('SELECT ItemName FROM `item list steam market tf2` WHERE PriceValue IS NOT NULL ORDER BY PointValue ASC')
+    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE realPrice IS NOT NULL ORDER BY metalPrice ASC')
     items.clear()
     items = [item[0] for item in mysql_cursor.fetchall()]
 
@@ -256,7 +256,7 @@ def main(delay):
                                 item = items[0]
                                 sleep(delay)
                                 continue
-                        price = floor(float(lowest_price) * 100)
+                        price = math.floor(float(lowest_price) * 100)
                         query = 'INSERT INTO tf2(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
                         
                         try:
