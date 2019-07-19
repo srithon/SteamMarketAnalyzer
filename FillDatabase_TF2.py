@@ -211,6 +211,8 @@ def main(delay):
         refresh_database()
         close_mysql_connection()
         
+        failures = 0
+        
         while broken:
             broken = False
             item = items[0]
@@ -265,9 +267,10 @@ def main(delay):
                             volume = 0
 
                         if verbose:
-                            print(query % (price, item))
+                            print(query % (item, price, volume))
 
                         cursor.execute(query, (item, price, volume))
+                        failures = 0
                     except Exception as e:
                         try:
                             print('Error in {}'.format(query))
@@ -301,6 +304,13 @@ def main(delay):
 
                     sleep(delay)
                     init_time += delay
+                    
+                    if failures > 3:
+                        proxy_dict = get_proxy_dict(get_new_proxy())
+                        failures = 0
+                    else:
+                        failures += 1
+                    
                     continue
                 try:
                     sleep(delay)
