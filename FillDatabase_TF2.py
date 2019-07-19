@@ -173,7 +173,7 @@ def get_proxy_dict(current_proxy):
 def refresh_database():
     global items
     # cursor.execute('SELECT ItemName FROM `item list steam market tf2 tf2` WHERE PriceValue IS NULL ORDER BY PointValue ASC')
-    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE name NOT LIKE "Uncraftable" AND realPrice IS NOT NULL ORDER BY metalPrice ASC')
+    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE name NOT LIKE "%(Non-Craftable)" AND realPrice IS NOT NULL ORDER BY metalPrice ASC')
     items.clear()
     items = [item[0] for item in mysql_cursor.fetchall()]
 
