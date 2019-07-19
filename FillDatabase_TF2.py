@@ -73,7 +73,7 @@ mysql_connection = mysql.connector.connect(host='localhost',
                              user='root',
                              password='LrD3FZGUz5JXy5c')
 
-mysql_cursor = mysqlConnection.cursor()
+mysql_cursor = mysql_connection.cursor()
 
 proxy_page = 1
 
@@ -307,7 +307,7 @@ def main(delay):
                     item = items[0]
                     if verbose:
                         print('Completed iteration #{}'.format(counter))
-                    if (counter % 100 == 0):
+                    if (counter % 10 == 0):
                         print('Saving lists...')
                         logger.info('Saving lists...')
                         save_lists()
