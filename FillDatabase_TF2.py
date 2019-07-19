@@ -175,11 +175,13 @@ def shutdown():
     except Exception as e:
         print(e)
 
-    if(connection.is_connected()):
+    try:
         connection.commit()
         connection.close()
         cursor.close()
         print('Committed and closed')
+    except Exception as e:
+        print(e)
 
     final_time = time()
     print('Time passed - {}'.format(final_time - init_time))
