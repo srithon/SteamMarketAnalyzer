@@ -77,6 +77,8 @@ mysql_cursor = mysql_connection.cursor()
 
 proxy_page = 1
 
+proxy_url='https://free-proxy-list.net/anonymous-proxy.html'
+
 init_time = time()
 
 s = None
@@ -90,7 +92,7 @@ def save_lists():
 
 
 def get_proxies():
-    global proxy_page
+    global proxy_page, proxy_url
 
     options = webdriver.FirefoxOptions()
     options.add_argument('--headless')
@@ -99,7 +101,7 @@ def get_proxies():
     
     while True:
         try:
-            driver.get('https://us-proxy.org')
+            driver.get(proxy_url)
             break
         except Exception as e:
             print(e)
@@ -119,7 +121,21 @@ def get_proxies():
         next_button = driver.find_element_by_css_selector('#proxylisttable_next > a:nth-child(1)')
         sleep(0.5)
         driver.execute_script('"window.scrollTo(0, document.body.scrollHeight);"')
-        next_button.click()
+        try:
+            next_button.click()
+        except:
+            logger.debug('Changing proxy sites. Currently: {}'.format(proxy_url))
+            print('Changing proxy sites. Currently: {}'.format(proxy_url))
+            if proxy_url == 'https://us-proxy.org':
+                proxy_url = 'https://free-proxy-list.net/uk-proxy.html'
+            elif proxy_url == 'https://free-proxy-list.net/uk-proxy.html':
+                proxy_url = 'https://free-proxy-list.net/anonymous-proxy.html'
+            else:
+                proxy_url = 'https://us-proxy.org'
+            
+            proxy_page = 0
+            
+            return
         current_page += 1
 
     proxy_page += 1
@@ -157,7 +173,7 @@ def get_proxy_dict(current_proxy):
 def refresh_database():
     global items
     # cursor.execute('SELECT ItemName FROM `item list steam market tf2 tf2` WHERE PriceValue IS NULL ORDER BY PointValue ASC')
-    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE realPrice IS NOT NULL ORDER BY metalPrice ASC')
+    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE name NOT LIKE "Uncraftable" AND realPrice IS NOT NULL ORDER BY metalPrice ASC')
     items.clear()
     items = [item[0] for item in mysql_cursor.fetchall()]
 
@@ -322,7 +338,7 @@ def main(delay):
                     item = items[0]
                     if verbose:
                         print('Completed iteration #{}'.format(counter))
-                    if (counter % 10 == 0):
+                    if (counter % 100 == 0):
                         print('Saving lists...')
                         logger.info('Saving lists...')
                         save_lists()
