@@ -1925,3 +1925,53 @@ LINE 1: ...VALUES (NOW(), 'Winter 2018 Cosmetic Case #122', 3, '1,312')
 21:45:51 ERROR:root_logger	list index out of range
 21:45:53 INFO:root_logger	Time passed - 7139.313249588013
 21:45:53 INFO:root_logger	Counter = 1977
+13:36:54 INFO:root_logger	Starting script...
+13:37:00 INFO:root_logger	Time passed - 5.094001054763794
+13:37:00 INFO:root_logger	Counter = 0
+13:37:06 INFO:root_logger	Starting script...
+13:37:17 INFO:root_logger	51.83.105.113:8080
+13:37:17 INFO:root_logger	51.83.13.153:8080
+13:37:17 INFO:root_logger	51.68.92.55:8080
+13:37:17 INFO:root_logger	51.75.199.54:8080
+13:37:17 INFO:root_logger	167.99.194.67:3128
+13:37:17 INFO:root_logger	203.145.179.117:8080
+13:37:17 INFO:root_logger	62.140.252.72:47766
+13:37:17 INFO:root_logger	185.129.217.177:8080
+13:37:17 INFO:root_logger	117.200.53.210:54639
+13:37:17 INFO:root_logger	93.170.4.145:50560
+13:37:18 INFO:root_logger	201.158.60.153:30383
+13:37:18 INFO:root_logger	46.241.120.230:49346
+13:37:18 INFO:root_logger	155.0.181.254:33188
+13:37:18 INFO:root_logger	202.150.132.98:63141
+13:37:18 INFO:root_logger	81.23.115.86:3128
+13:37:18 INFO:root_logger	162.220.108.59:8080
+13:37:18 INFO:root_logger	92.126.99.95:3128
+13:37:18 INFO:root_logger	181.112.42.38:38264
+13:37:18 INFO:root_logger	182.53.197.236:36981
+13:37:18 INFO:root_logger	153.232.166.228:8080
+13:37:18 INFO:root_logger	Time passed - 0.03128695487976074
+13:37:18 INFO:root_logger	Counter = 0
+13:37:43 INFO:root_logger	Starting script...
+13:37:54 INFO:root_logger	51.83.105.113:8080
+13:37:54 INFO:root_logger	51.83.13.153:8080
+13:37:54 INFO:root_logger	51.68.92.55:8080
+13:37:54 INFO:root_logger	51.75.199.54:8080
+13:37:54 INFO:root_logger	167.99.194.67:3128
+13:37:54 INFO:root_logger	203.145.179.117:8080
+13:37:54 INFO:root_logger	62.140.252.72:47766
+13:37:54 INFO:root_logger	185.129.217.177:8080
+13:37:54 INFO:root_logger	117.200.53.210:54639
+13:37:54 INFO:root_logger	93.170.4.145:50560
+13:37:54 INFO:root_logger	201.158.60.153:30383
+13:37:54 INFO:root_logger	46.241.120.230:49346
+13:37:54 INFO:root_logger	155.0.181.254:33188
+13:37:54 INFO:root_logger	202.150.132.98:63141
+13:37:54 INFO:root_logger	81.23.115.86:3128
+13:37:54 INFO:root_logger	162.220.108.59:8080
+13:37:54 INFO:root_logger	92.126.99.95:3128
+13:37:54 INFO:root_logger	181.112.42.38:38264
+13:37:54 INFO:root_logger	182.53.197.236:36981
+13:37:54 INFO:root_logger	153.232.166.228:8080
+13:38:16 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Alien%20Tech%20Air%20Strike%20(Field-Tested) (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000021CB3B11780>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+13:39:09 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Alien%20Tech%20Air%20Strike%20(Field-Tested) (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+13:39:12 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
