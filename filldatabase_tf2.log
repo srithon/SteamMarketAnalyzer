@@ -715,3 +715,1213 @@ LINE 1: ...VALUES (NOW(), 'Winter 2018 Cosmetic Case #122', 3, '1,312')
 21:57:50 INFO:root_logger	Time passed - 812.6234052181244
 21:57:50 INFO:root_logger	Time passed - 812.6234052181244
 21:57:50 INFO:root_logger	Counter = 67
+22:02:39 INFO:root_logger	Starting script...
+22:02:50 INFO:root_logger	182.52.51.23:59402
+22:02:50 INFO:root_logger	190.119.199.18:57333
+22:02:50 INFO:root_logger	200.37.54.10:50576
+22:02:50 INFO:root_logger	87.251.228.114:31793
+22:02:50 INFO:root_logger	193.34.140.84:57220
+22:02:50 INFO:root_logger	1.20.97.122:44279
+22:02:50 INFO:root_logger	103.245.204.58:50093
+22:02:50 INFO:root_logger	77.120.40.54:53446
+22:02:50 INFO:root_logger	186.225.56.210:57506
+22:02:50 INFO:root_logger	124.41.211.177:55969
+22:02:50 INFO:root_logger	109.87.40.23:53543
+22:02:50 INFO:root_logger	134.119.188.158:1080
+22:02:50 INFO:root_logger	95.31.119.210:31135
+22:02:50 INFO:root_logger	178.33.6.229:3128
+22:02:50 INFO:root_logger	123.108.253.82:55221
+22:02:50 INFO:root_logger	176.223.51.237:43861
+22:02:50 INFO:root_logger	118.97.53.99:31439
+22:02:50 INFO:root_logger	31.135.22.20:45335
+22:02:50 INFO:root_logger	176.192.58.78:60412
+22:02:50 INFO:root_logger	201.20.92.102:33490
+22:02:58 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+22:03:02 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+22:03:23 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B65D30>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:03:46 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B6A860>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:03:52 ERROR:root_logger	'lowest_price'
+22:03:55 ERROR:root_logger	'lowest_price'
+22:03:59 ERROR:root_logger	'lowest_price'
+22:04:02 ERROR:root_logger	'lowest_price'
+22:04:05 ERROR:root_logger	'lowest_price'
+22:04:09 ERROR:root_logger	'lowest_price'
+22:04:16 ERROR:root_logger	'lowest_price'
+22:04:19 ERROR:root_logger	'lowest_price'
+22:04:19 ERROR:root_logger	Gave up on Air Strike
+22:04:22 ERROR:root_logger	'lowest_price'
+22:04:22 ERROR:root_logger	Gave up on Ali Baba's Wee Booties
+22:04:26 ERROR:root_logger	'lowest_price'
+22:04:26 ERROR:root_logger	Gave up on Amputator
+22:04:29 ERROR:root_logger	'lowest_price'
+22:04:29 ERROR:root_logger	Gave up on Atomizer
+22:04:32 ERROR:root_logger	'lowest_price'
+22:04:32 ERROR:root_logger	Gave up on B.A.S.E. Jumper
+22:04:36 ERROR:root_logger	'lowest_price'
+22:04:36 ERROR:root_logger	Gave up on Back Scatter
+22:04:39 ERROR:root_logger	'lowest_price'
+22:04:39 ERROR:root_logger	Gave up on Backburner
+22:04:43 ERROR:root_logger	'lowest_price'
+22:04:43 ERROR:root_logger	Gave up on Battalion's Backup
+22:04:46 ERROR:root_logger	'lowest_price'
+22:04:46 ERROR:root_logger	Gave up on Bazaar Bargain
+22:04:49 ERROR:root_logger	'lowest_price'
+22:04:49 ERROR:root_logger	Gave up on Big Earner
+22:04:53 ERROR:root_logger	'lowest_price'
+22:04:53 ERROR:root_logger	Gave up on Blutsauger
+22:04:56 ERROR:root_logger	'lowest_price'
+22:04:56 ERROR:root_logger	Gave up on Bootlegger
+22:04:59 ERROR:root_logger	'lowest_price'
+22:04:59 ERROR:root_logger	Gave up on Brass Beast
+22:05:03 ERROR:root_logger	'lowest_price'
+22:05:03 ERROR:root_logger	Gave up on Buff Banner
+22:05:06 ERROR:root_logger	'lowest_price'
+22:05:06 ERROR:root_logger	Gave up on Buffalo Steak Sandvich
+22:05:09 ERROR:root_logger	'lowest_price'
+22:05:09 ERROR:root_logger	Gave up on Candy Cane
+22:05:12 ERROR:root_logger	'lowest_price'
+22:05:12 ERROR:root_logger	Gave up on Chargin' Targe
+22:05:16 ERROR:root_logger	'lowest_price'
+22:05:16 ERROR:root_logger	Gave up on Claidheamh Mòr
+22:05:19 ERROR:root_logger	'lowest_price'
+22:05:19 ERROR:root_logger	Gave up on Classic
+22:05:23 ERROR:root_logger	'lowest_price'
+22:05:23 ERROR:root_logger	Gave up on Cleaner's Carbine
+22:05:26 ERROR:root_logger	'lowest_price'
+22:05:26 ERROR:root_logger	Gave up on Cloak and Dagger
+22:05:29 ERROR:root_logger	'lowest_price'
+22:05:29 ERROR:root_logger	Gave up on Concheror
+22:05:33 ERROR:root_logger	'lowest_price'
+22:05:33 ERROR:root_logger	Gave up on Cow Mangler 5000
+22:05:36 ERROR:root_logger	'lowest_price'
+22:05:36 ERROR:root_logger	Gave up on Cozy Camper
+22:05:39 ERROR:root_logger	'lowest_price'
+22:05:39 ERROR:root_logger	Gave up on Crusader's Crossbow
+22:05:43 ERROR:root_logger	'lowest_price'
+22:05:43 ERROR:root_logger	Gave up on Dalokohs Bar
+22:05:46 ERROR:root_logger	'lowest_price'
+22:05:46 ERROR:root_logger	Gave up on Darwin's Danger Shield
+22:05:49 ERROR:root_logger	'lowest_price'
+22:05:49 ERROR:root_logger	Gave up on Dead Ringer
+22:05:53 ERROR:root_logger	'lowest_price'
+22:05:53 ERROR:root_logger	Gave up on Degreaser
+22:05:56 ERROR:root_logger	'lowest_price'
+22:05:56 ERROR:root_logger	Gave up on Detonator
+22:05:59 ERROR:root_logger	'lowest_price'
+22:05:59 ERROR:root_logger	Gave up on Diamondback
+22:06:03 ERROR:root_logger	'lowest_price'
+22:06:03 ERROR:root_logger	Gave up on Direct Hit
+22:06:06 ERROR:root_logger	'lowest_price'
+22:06:06 ERROR:root_logger	Gave up on Disciplinary Action
+22:06:09 ERROR:root_logger	'lowest_price'
+22:06:09 ERROR:root_logger	Gave up on Escape Plan
+22:06:13 ERROR:root_logger	'lowest_price'
+22:06:13 ERROR:root_logger	Gave up on Eureka Effect
+22:06:16 ERROR:root_logger	'lowest_price'
+22:06:16 ERROR:root_logger	Gave up on Eviction Notice
+22:06:19 ERROR:root_logger	'lowest_price'
+22:06:19 ERROR:root_logger	Gave up on Eyelander
+22:06:23 ERROR:root_logger	'lowest_price'
+22:06:23 ERROR:root_logger	Gave up on Family Business
+22:06:26 ERROR:root_logger	'lowest_price'
+22:06:26 ERROR:root_logger	Gave up on Fan O'War
+22:06:29 ERROR:root_logger	'lowest_price'
+22:06:29 ERROR:root_logger	Gave up on Flare Gun
+22:06:33 ERROR:root_logger	'lowest_price'
+22:06:33 ERROR:root_logger	Gave up on Force-A-Nature
+22:06:36 ERROR:root_logger	'lowest_price'
+22:06:36 ERROR:root_logger	Gave up on Fortified Compound
+22:06:39 ERROR:root_logger	'lowest_price'
+22:06:39 ERROR:root_logger	Gave up on Frontier Justice
+22:06:43 ERROR:root_logger	'lowest_price'
+22:06:43 ERROR:root_logger	Gave up on Gloves of Running Urgently
+22:06:46 ERROR:root_logger	'lowest_price'
+22:06:46 ERROR:root_logger	Gave up on Gunboats
+22:06:49 ERROR:root_logger	'lowest_price'
+22:06:49 ERROR:root_logger	Gave up on Gunslinger
+22:06:52 ERROR:root_logger	'lowest_price'
+22:06:52 ERROR:root_logger	Gave up on Hitman's Heatmaker
+22:06:56 ERROR:root_logger	'lowest_price'
+22:06:56 ERROR:root_logger	Gave up on Holiday Punch
+22:06:59 ERROR:root_logger	'lowest_price'
+22:06:59 ERROR:root_logger	Gave up on Holy Mackerel
+22:07:02 ERROR:root_logger	'lowest_price'
+22:07:02 ERROR:root_logger	Gave up on Homewrecker
+22:07:06 ERROR:root_logger	'lowest_price'
+22:07:06 ERROR:root_logger	Gave up on Huntsman
+22:07:09 ERROR:root_logger	'lowest_price'
+22:07:09 ERROR:root_logger	Gave up on Iron Bomber
+22:07:12 ERROR:root_logger	'lowest_price'
+22:07:12 ERROR:root_logger	Gave up on Jag
+22:07:16 ERROR:root_logger	'lowest_price'
+22:07:16 ERROR:root_logger	Gave up on Killing Gloves of Boxing
+22:07:19 ERROR:root_logger	'lowest_price'
+22:07:19 ERROR:root_logger	Gave up on Kritzkrieg
+22:07:22 ERROR:root_logger	'lowest_price'
+22:07:22 ERROR:root_logger	Gave up on L'Etranger
+22:07:25 ERROR:root_logger	'lowest_price'
+22:07:25 ERROR:root_logger	Gave up on Liberty Launcher
+22:07:29 ERROR:root_logger	'lowest_price'
+22:07:29 ERROR:root_logger	Gave up on Loch-n-Load
+22:07:32 ERROR:root_logger	'lowest_price'
+22:07:32 ERROR:root_logger	Gave up on Lollichop
+22:07:35 ERROR:root_logger	'lowest_price'
+22:07:35 ERROR:root_logger	Gave up on Loose Cannon
+22:07:39 ERROR:root_logger	'lowest_price'
+22:07:39 ERROR:root_logger	Gave up on Machina
+22:07:42 ERROR:root_logger	'lowest_price'
+22:07:42 ERROR:root_logger	Gave up on Manmelter
+22:07:45 ERROR:root_logger	'lowest_price'
+22:07:45 ERROR:root_logger	Gave up on Mantreads
+22:07:49 ERROR:root_logger	'lowest_price'
+22:07:49 ERROR:root_logger	Gave up on Natascha
+22:07:52 ERROR:root_logger	'lowest_price'
+22:07:52 ERROR:root_logger	Gave up on Nessie's Nine Iron
+22:07:55 ERROR:root_logger	'lowest_price'
+22:07:55 ERROR:root_logger	Gave up on Noise Maker - Winter Holiday
+22:07:59 ERROR:root_logger	'lowest_price'
+22:07:59 ERROR:root_logger	Gave up on Original
+22:08:02 ERROR:root_logger	'lowest_price'
+22:08:02 ERROR:root_logger	Gave up on Panic Attack
+22:08:05 ERROR:root_logger	'lowest_price'
+22:08:05 ERROR:root_logger	Gave up on Phlogistinator
+22:08:09 ERROR:root_logger	'lowest_price'
+22:08:09 ERROR:root_logger	Gave up on Pomson 6000
+22:08:12 ERROR:root_logger	'lowest_price'
+22:08:12 ERROR:root_logger	Gave up on Postal Pummeler
+22:08:15 ERROR:root_logger	'lowest_price'
+22:08:15 ERROR:root_logger	Gave up on Pretty Boy's Pocket Pistol
+22:08:19 ERROR:root_logger	'lowest_price'
+22:08:19 ERROR:root_logger	Gave up on Quickiebomb Launcher
+22:08:22 ERROR:root_logger	'lowest_price'
+22:08:22 ERROR:root_logger	Gave up on Rainblower
+22:08:25 ERROR:root_logger	'lowest_price'
+22:08:25 ERROR:root_logger	Gave up on Red-Tape Recorder
+22:08:29 ERROR:root_logger	'lowest_price'
+22:08:29 ERROR:root_logger	Gave up on Rescue Ranger
+22:08:32 ERROR:root_logger	'lowest_price'
+22:08:32 ERROR:root_logger	Gave up on Reserve Shooter
+22:08:35 ERROR:root_logger	'lowest_price'
+22:08:35 ERROR:root_logger	Gave up on Righteous Bison
+22:08:39 ERROR:root_logger	'lowest_price'
+22:08:39 ERROR:root_logger	Gave up on Sandvich
+22:08:42 ERROR:root_logger	'lowest_price'
+22:08:42 ERROR:root_logger	Gave up on Scotsman's Skullcutter
+22:08:45 ERROR:root_logger	'lowest_price'
+22:08:45 ERROR:root_logger	Gave up on Scottish Handshake
+22:08:49 ERROR:root_logger	'lowest_price'
+22:08:49 ERROR:root_logger	Gave up on Scottish Resistance
+22:08:52 ERROR:root_logger	'lowest_price'
+22:08:56 ERROR:root_logger	'lowest_price'
+22:08:56 ERROR:root_logger	Gave up on Shahanshah
+22:08:59 ERROR:root_logger	'lowest_price'
+22:08:59 ERROR:root_logger	Gave up on Sharpened Volcano Fragment
+22:09:02 ERROR:root_logger	'lowest_price'
+22:09:02 ERROR:root_logger	Gave up on Short Circuit
+22:09:06 ERROR:root_logger	'lowest_price'
+22:09:06 ERROR:root_logger	Gave up on Shortstop
+22:09:09 ERROR:root_logger	'lowest_price'
+22:09:09 ERROR:root_logger	Gave up on Soda Popper
+22:09:12 ERROR:root_logger	'lowest_price'
+22:09:12 ERROR:root_logger	Gave up on Southern Hospitality
+22:09:15 ERROR:root_logger	'lowest_price'
+22:09:15 ERROR:root_logger	Gave up on Splendid Screen
+22:09:19 ERROR:root_logger	'lowest_price'
+22:09:19 ERROR:root_logger	Gave up on Spy-cicle
+22:09:22 ERROR:root_logger	'lowest_price'
+22:09:22 ERROR:root_logger	Gave up on Sun-on-a-Stick
+22:09:25 ERROR:root_logger	'lowest_price'
+22:09:25 ERROR:root_logger	Gave up on Sydney Sleeper
+22:09:29 ERROR:root_logger	'lowest_price'
+22:09:29 ERROR:root_logger	Gave up on Third Degree
+22:09:32 ERROR:root_logger	'lowest_price'
+22:09:32 ERROR:root_logger	Gave up on Tide Turner
+22:09:35 ERROR:root_logger	'lowest_price'
+22:09:35 ERROR:root_logger	Gave up on Tomislav
+22:09:38 ERROR:root_logger	'lowest_price'
+22:09:38 ERROR:root_logger	Gave up on Tribalman's Shiv
+22:09:42 ERROR:root_logger	'lowest_price'
+22:09:42 ERROR:root_logger	Gave up on Ubersaw
+22:09:45 ERROR:root_logger	'lowest_price'
+22:09:45 ERROR:root_logger	Gave up on Ullapool Caber
+22:09:48 ERROR:root_logger	'lowest_price'
+22:09:48 ERROR:root_logger	Gave up on Vaccinator
+22:09:52 ERROR:root_logger	'lowest_price'
+22:09:52 ERROR:root_logger	Gave up on Vita-Saw
+22:09:55 ERROR:root_logger	'lowest_price'
+22:09:55 ERROR:root_logger	Gave up on Warrior's Spirit
+22:09:59 ERROR:root_logger	'lowest_price'
+22:09:59 ERROR:root_logger	Gave up on Widowmaker
+22:10:02 ERROR:root_logger	'lowest_price'
+22:10:02 ERROR:root_logger	Gave up on Winger
+22:10:05 ERROR:root_logger	'lowest_price'
+22:10:05 ERROR:root_logger	Gave up on Wrangler
+22:10:08 ERROR:root_logger	'lowest_price'
+22:10:08 ERROR:root_logger	Gave up on Wrap Assassin
+22:10:12 ERROR:root_logger	'lowest_price'
+22:10:12 ERROR:root_logger	Gave up on Your Eternal Reward
+22:10:15 ERROR:root_logger	'lowest_price'
+22:10:15 ERROR:root_logger	Gave up on Disciplinary Action (Non-Craftable)
+22:10:18 ERROR:root_logger	'lowest_price'
+22:10:18 ERROR:root_logger	Gave up on L'Etranger (Non-Craftable)
+22:10:32 ERROR:root_logger	'lowest_price'
+22:10:36 ERROR:root_logger	'lowest_price'
+22:10:36 ERROR:root_logger	Gave up on Air Strike (Non-Craftable)
+22:10:39 ERROR:root_logger	'lowest_price'
+22:10:39 ERROR:root_logger	Gave up on Ali Baba's Wee Booties (Non-Craftable)
+22:10:42 ERROR:root_logger	'lowest_price'
+22:10:42 ERROR:root_logger	Gave up on Amputator (Non-Craftable)
+22:10:46 ERROR:root_logger	'lowest_price'
+22:10:46 ERROR:root_logger	Gave up on Axtinguisher (Non-Craftable)
+22:10:49 ERROR:root_logger	'lowest_price'
+22:10:49 ERROR:root_logger	Gave up on B.A.S.E. Jumper (Non-Craftable)
+22:10:52 ERROR:root_logger	'lowest_price'
+22:10:52 ERROR:root_logger	Gave up on Back Scatter (Non-Craftable)
+22:10:56 ERROR:root_logger	'lowest_price'
+22:10:56 ERROR:root_logger	Gave up on Backburner (Non-Craftable)
+22:10:59 ERROR:root_logger	'lowest_price'
+22:10:59 ERROR:root_logger	Gave up on Bat Outta Hell (Non-Craftable)
+22:11:02 ERROR:root_logger	'lowest_price'
+22:11:02 ERROR:root_logger	Gave up on Battalion's Backup (Non-Craftable)
+22:11:06 ERROR:root_logger	'lowest_price'
+22:11:06 ERROR:root_logger	Gave up on Bazaar Bargain (Non-Craftable)
+22:11:09 ERROR:root_logger	'lowest_price'
+22:11:09 ERROR:root_logger	Gave up on Beggar's Bazooka (Non-Craftable)
+22:11:12 ERROR:root_logger	'lowest_price'
+22:11:12 ERROR:root_logger	Gave up on Big Earner (Non-Craftable)
+22:11:16 ERROR:root_logger	'lowest_price'
+22:11:16 ERROR:root_logger	Gave up on Blutsauger (Non-Craftable)
+22:11:19 ERROR:root_logger	'lowest_price'
+22:11:19 ERROR:root_logger	Gave up on Bonk! Atomic Punch (Non-Craftable)
+22:11:22 ERROR:root_logger	'lowest_price'
+22:11:22 ERROR:root_logger	Gave up on Bootlegger (Non-Craftable)
+22:11:26 ERROR:root_logger	'lowest_price'
+22:11:26 ERROR:root_logger	Gave up on Boston Basher (Non-Craftable)
+22:11:29 ERROR:root_logger	'lowest_price'
+22:11:29 ERROR:root_logger	Gave up on Buffalo Steak Sandvich (Non-Craftable)
+22:11:32 ERROR:root_logger	'lowest_price'
+22:11:32 ERROR:root_logger	Gave up on Candy Cane (Non-Craftable)
+22:11:36 ERROR:root_logger	'lowest_price'
+22:11:36 ERROR:root_logger	Gave up on Claidheamh Mòr (Non-Craftable)
+22:11:39 ERROR:root_logger	'lowest_price'
+22:11:39 ERROR:root_logger	Gave up on Classic (Non-Craftable)
+22:11:43 ERROR:root_logger	'lowest_price'
+22:11:43 ERROR:root_logger	Gave up on Cleaner's Carbine (Non-Craftable)
+22:11:46 ERROR:root_logger	'lowest_price'
+22:11:46 ERROR:root_logger	Gave up on Concheror (Non-Craftable)
+22:11:49 ERROR:root_logger	'lowest_price'
+22:11:49 ERROR:root_logger	Gave up on Conniver's Kunai (Non-Craftable)
+22:11:53 ERROR:root_logger	'lowest_price'
+22:11:53 ERROR:root_logger	Gave up on Cozy Camper (Non-Craftable)
+22:11:56 ERROR:root_logger	'lowest_price'
+22:11:56 ERROR:root_logger	Gave up on Crit-a-Cola (Non-Craftable)
+22:11:59 ERROR:root_logger	'lowest_price'
+22:11:59 ERROR:root_logger	Gave up on Dead Ringer (Non-Craftable)
+22:12:03 ERROR:root_logger	'lowest_price'
+22:12:03 ERROR:root_logger	Gave up on Detonator (Non-Craftable)
+22:12:06 ERROR:root_logger	'lowest_price'
+22:12:06 ERROR:root_logger	Gave up on Diamondback (Non-Craftable)
+22:12:09 ERROR:root_logger	'lowest_price'
+22:12:09 ERROR:root_logger	Gave up on Enforcer (Non-Craftable)
+22:12:13 ERROR:root_logger	'lowest_price'
+22:12:13 ERROR:root_logger	Gave up on Equalizer (Non-Craftable)
+22:12:16 ERROR:root_logger	'lowest_price'
+22:12:16 ERROR:root_logger	Gave up on Eyelander (Non-Craftable)
+22:12:20 ERROR:root_logger	'lowest_price'
+22:12:20 ERROR:root_logger	Gave up on Family Business (Non-Craftable)
+22:12:23 ERROR:root_logger	'lowest_price'
+22:12:23 ERROR:root_logger	Gave up on Fan O'War (Non-Craftable)
+22:12:26 ERROR:root_logger	'lowest_price'
+22:12:26 ERROR:root_logger	Gave up on Fists of Steel (Non-Craftable)
+22:12:29 ERROR:root_logger	'lowest_price'
+22:12:29 ERROR:root_logger	Gave up on Flare Gun (Non-Craftable)
+22:12:33 ERROR:root_logger	'lowest_price'
+22:12:33 ERROR:root_logger	Gave up on Flying Guillotine (Non-Craftable)
+22:12:36 ERROR:root_logger	'lowest_price'
+22:12:36 ERROR:root_logger	Gave up on Frontier Justice (Non-Craftable)
+22:12:39 ERROR:root_logger	'lowest_price'
+22:12:39 ERROR:root_logger	Gave up on Gloves of Running Urgently (Non-Craftable)
+22:12:43 ERROR:root_logger	'lowest_price'
+22:12:43 ERROR:root_logger	Gave up on Half-Zatoichi (Non-Craftable)
+22:12:46 ERROR:root_logger	'lowest_price'
+22:12:46 ERROR:root_logger	Gave up on Holiday Punch (Non-Craftable)
+22:12:49 ERROR:root_logger	'lowest_price'
+22:12:49 ERROR:root_logger	Gave up on Holy Mackerel (Non-Craftable)
+22:12:53 ERROR:root_logger	'lowest_price'
+22:12:53 ERROR:root_logger	Gave up on Homewrecker (Non-Craftable)
+22:12:56 ERROR:root_logger	'lowest_price'
+22:12:56 ERROR:root_logger	Gave up on Huntsman (Non-Craftable)
+22:13:00 ERROR:root_logger	'lowest_price'
+22:13:00 ERROR:root_logger	Gave up on Iron Bomber (Non-Craftable)
+22:13:03 ERROR:root_logger	'lowest_price'
+22:13:03 ERROR:root_logger	Gave up on Jag (Non-Craftable)
+22:13:07 ERROR:root_logger	'lowest_price'
+22:13:07 ERROR:root_logger	Gave up on Manmelter (Non-Craftable)
+22:13:10 ERROR:root_logger	'lowest_price'
+22:13:10 ERROR:root_logger	Gave up on Natascha (Non-Craftable)
+22:13:13 ERROR:root_logger	'lowest_price'
+22:13:13 ERROR:root_logger	Gave up on Panic Attack (Non-Craftable)
+22:13:16 ERROR:root_logger	'lowest_price'
+22:13:16 ERROR:root_logger	Gave up on Phlogistinator (Non-Craftable)
+22:13:20 ERROR:root_logger	'lowest_price'
+22:13:20 ERROR:root_logger	Gave up on Pretty Boy's Pocket Pistol (Non-Craftable)
+22:13:23 ERROR:root_logger	'lowest_price'
+22:13:23 ERROR:root_logger	Gave up on Quick-Fix (Non-Craftable)
+22:13:26 ERROR:root_logger	'lowest_price'
+22:13:26 ERROR:root_logger	Gave up on Red-Tape Recorder (Non-Craftable)
+22:13:30 ERROR:root_logger	'lowest_price'
+22:13:30 ERROR:root_logger	Gave up on Rescue Ranger (Non-Craftable)
+22:13:33 ERROR:root_logger	'lowest_price'
+22:13:33 ERROR:root_logger	Gave up on Sandman (Non-Craftable)
+22:13:36 ERROR:root_logger	'lowest_price'
+22:13:36 ERROR:root_logger	Gave up on Scottish Resistance (Non-Craftable)
+22:13:40 ERROR:root_logger	'lowest_price'
+22:13:40 ERROR:root_logger	Gave up on Shahanshah (Non-Craftable)
+22:13:43 ERROR:root_logger	'lowest_price'
+22:13:43 ERROR:root_logger	Gave up on Soda Popper (Non-Craftable)
+22:13:46 ERROR:root_logger	'lowest_price'
+22:13:46 ERROR:root_logger	Gave up on Southern Hospitality (Non-Craftable)
+22:13:50 ERROR:root_logger	'lowest_price'
+22:13:50 ERROR:root_logger	Gave up on Splendid Screen (Non-Craftable)
+22:13:53 ERROR:root_logger	'lowest_price'
+22:13:53 ERROR:root_logger	Gave up on Third Degree (Non-Craftable)
+22:13:56 ERROR:root_logger	'lowest_price'
+22:13:56 ERROR:root_logger	Gave up on Tide Turner (Non-Craftable)
+22:14:00 ERROR:root_logger	'lowest_price'
+22:14:00 ERROR:root_logger	Gave up on Ubersaw (Non-Craftable)
+22:14:03 ERROR:root_logger	'lowest_price'
+22:14:03 ERROR:root_logger	Gave up on Ullapool Caber (Non-Craftable)
+22:14:06 ERROR:root_logger	'lowest_price'
+22:14:06 ERROR:root_logger	Gave up on Warrior's Spirit (Non-Craftable)
+22:14:10 ERROR:root_logger	'lowest_price'
+22:14:10 ERROR:root_logger	Gave up on Winger (Non-Craftable)
+22:14:13 ERROR:root_logger	'lowest_price'
+22:14:13 ERROR:root_logger	Gave up on Wrap Assassin (Non-Craftable)
+22:14:16 ERROR:root_logger	'lowest_price'
+22:14:26 ERROR:root_logger	'lowest_price'
+22:14:43 ERROR:root_logger	'lowest_price'
+22:16:53 ERROR:root_logger	'lowest_price'
+22:17:00 ERROR:root_logger	'lowest_price'
+22:17:10 ERROR:root_logger	'lowest_price'
+22:20:07 INFO:root_logger	Saving lists...
+22:25:49 INFO:root_logger	Saving lists...
+22:31:34 INFO:root_logger	Saving lists...
+22:36:49 ERROR:root_logger	'lowest_price'
+22:37:19 INFO:root_logger	Saving lists...
+22:37:23 ERROR:root_logger	'lowest_price'
+22:38:23 ERROR:root_logger	NULL IN SOURCE
+22:38:23 INFO:root_logger	Counter = 419
+22:38:25 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B2CCC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+22:38:48 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B6AE48>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:38:55 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+22:38:59 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607BAB940>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+22:39:22 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607BABE10>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:39:28 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+22:39:30 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B2CDA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+22:39:33 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B65AC8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+22:39:56 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000246083D72B0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:40:00 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000246083D7780>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+22:40:23 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000246083D7C50>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+22:40:29 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=D-eye-monds (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+22:42:37 ERROR:root_logger	'lowest_price'
+22:45:09 INFO:root_logger	Saving lists...
+22:48:03 ERROR:root_logger	'lowest_price'
+22:50:53 INFO:root_logger	Saving lists...
+22:51:18 ERROR:root_logger	'lowest_price'
+22:56:33 INFO:root_logger	Saving lists...
+23:02:16 INFO:root_logger	Saving lists...
+23:02:44 ERROR:root_logger	'lowest_price'
+23:04:02 ERROR:root_logger	NULL IN SOURCE
+23:04:02 INFO:root_logger	Counter = 831
+23:04:04 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Vintage%20Ze%20Goggles (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000246083E0908>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+23:05:06 ERROR:root_logger	'lowest_price'
+23:08:08 INFO:root_logger	Saving lists...
+23:13:22 INFO:root_logger	Saving lists...
+23:13:26 ERROR:root_logger	NULL IN SOURCE
+23:13:26 INFO:root_logger	Counter = 1001
+23:13:26 DEBUG:root_logger	Used up all proxies! Refreshing
+23:13:37 INFO:root_logger	122.176.65.143:40280
+23:13:37 INFO:root_logger	36.66.220.173:53031
+23:13:37 INFO:root_logger	54.37.21.29:3128
+23:13:37 INFO:root_logger	81.163.57.121:41258
+23:13:37 INFO:root_logger	91.225.165.4:52046
+23:13:37 INFO:root_logger	37.187.149.234:8080
+23:13:37 INFO:root_logger	77.39.7.153:38264
+23:13:37 INFO:root_logger	89.249.65.140:34480
+23:13:37 INFO:root_logger	213.87.92.216:36300
+23:13:37 INFO:root_logger	125.26.7.183:57896
+23:13:37 INFO:root_logger	125.26.99.182:36145
+23:13:37 INFO:root_logger	81.163.36.210:34197
+23:13:37 INFO:root_logger	41.75.4.208:53281
+23:13:37 INFO:root_logger	5.59.105.17:56274
+23:13:37 INFO:root_logger	181.143.10.246:57932
+23:13:37 INFO:root_logger	159.203.14.149:4000
+23:13:37 INFO:root_logger	67.205.189.71:3128
+23:13:37 INFO:root_logger	52.68.71.233:3128
+23:13:37 INFO:root_logger	109.111.155.50:53281
+23:13:37 INFO:root_logger	36.90.105.72:8080
+23:14:28 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Strange%20Part:%20Demomen%20Killed (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+23:14:52 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Strange%20Part:%20Demomen%20Killed (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B7D518>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+23:14:55 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:15:05 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:15:11 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:15:15 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Strange%20Part:%20Demomen%20Killed (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+23:20:29 DEBUG:root_logger	Failed to get response. Retrying. item = Strange Part: Demomen Killed
+23:20:38 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Strange%20Part:%20Demomen%20Killed (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+23:21:23 ERROR:root_logger	'lowest_price'
+23:21:23 ERROR:root_logger	Gave up on Strange Blood Botkiller Stickybomb Launcher Mk.I
+23:21:33 ERROR:root_logger	'lowest_price'
+23:25:39 ERROR:root_logger	'lowest_price'
+23:25:57 INFO:root_logger	Saving lists...
+23:31:12 INFO:root_logger	Saving lists...
+23:35:25 ERROR:root_logger	'lowest_price'
+23:36:28 INFO:root_logger	Saving lists...
+23:40:09 ERROR:root_logger	'lowest_price'
+23:40:09 ERROR:root_logger	Gave up on Strange Lonesome Loafers
+23:41:00 ERROR:root_logger	'lowest_price'
+23:41:47 INFO:root_logger	Saving lists...
+23:47:05 INFO:root_logger	Saving lists...
+23:52:19 ERROR:root_logger	NULL IN SOURCE
+23:52:19 INFO:root_logger	Counter = 1599
+23:52:27 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+23:52:42 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:52:43 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:52:45 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:53:06 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B904E0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+23:53:29 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B7D940>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+23:54:22 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+23:55:24 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 503 Service Unavailable',)))
+23:55:26 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+23:55:47 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B90710>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+23:56:09 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+23:56:12 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Lucky%20Cat%20Hat (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000024607B90AC8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+23:56:12 DEBUG:root_logger	Used up all proxies! Refreshing
+23:56:24 INFO:root_logger	89.17.37.218:52957
+23:56:24 INFO:root_logger	60.253.115.10:61956
+23:56:24 INFO:root_logger	5.58.156.61:48638
+23:56:24 INFO:root_logger	45.162.130.141:33039
+23:56:24 INFO:root_logger	176.196.207.138:33159
+23:56:24 INFO:root_logger	200.33.143.75:49346
+23:56:24 INFO:root_logger	175.142.248.51:53281
+23:56:24 INFO:root_logger	1.20.97.4:52237
+23:56:24 INFO:root_logger	151.106.10.56:1080
+23:56:24 INFO:root_logger	210.48.204.134:46269
+23:56:24 INFO:root_logger	210.5.106.202:45618
+23:56:24 INFO:root_logger	191.232.167.197:80
+23:56:24 INFO:root_logger	222.165.195.5:53281
+23:56:24 INFO:root_logger	110.74.196.138:51587
+23:56:24 INFO:root_logger	185.42.192.118:41343
+23:56:24 INFO:root_logger	36.89.209.42:42852
+23:56:24 INFO:root_logger	138.0.229.213:33611
+23:56:24 INFO:root_logger	24.226.159.195:44787
+23:56:24 INFO:root_logger	80.48.119.28:8080
+23:56:24 INFO:root_logger	209.97.176.220:8118
+23:56:39 INFO:root_logger	Saving lists...
+23:57:43 ERROR:root_logger	'lowest_price'
+00:05:27 INFO:root_logger	Saving lists...
+00:06:48 ERROR:root_logger	'lowest_price'
+00:06:48 ERROR:root_logger	Gave up on Collector's Killing Gloves of Boxing
+00:09:58 ERROR:root_logger	'lowest_price'
+00:09:58 ERROR:root_logger	Gave up on Collector's Gloves of Running Urgently
+00:11:51 ERROR:root_logger	'lowest_price'
+00:11:51 ERROR:root_logger	Gave up on Collector's Overdose
+00:12:04 ERROR:root_logger	'lowest_price'
+00:12:04 ERROR:root_logger	Gave up on Collector's Wrap Assassin
+00:14:18 INFO:root_logger	Saving lists...
+00:14:54 ERROR:root_logger	'lowest_price'
+00:14:54 ERROR:root_logger	Gave up on Collector's Baby Face's Blaster
+00:15:06 ERROR:root_logger	'lowest_price'
+00:15:06 ERROR:root_logger	Gave up on Collector's Enforcer
+00:15:36 ERROR:root_logger	'lowest_price'
+00:15:36 ERROR:root_logger	Gave up on Collector's Sun-on-a-Stick
+00:17:02 ERROR:root_logger	'lowest_price'
+00:17:02 ERROR:root_logger	Gave up on Collector's Brass Beast
+00:17:31 ERROR:root_logger	'lowest_price'
+00:17:31 ERROR:root_logger	Gave up on Collector's Beggar's Bazooka
+00:18:14 ERROR:root_logger	'lowest_price'
+00:18:14 ERROR:root_logger	Gave up on Collector's Sharpened Volcano Fragment
+00:20:11 ERROR:root_logger	'lowest_price'
+00:20:11 ERROR:root_logger	Gave up on Collector's Southern Hospitality
+00:20:30 ERROR:root_logger	'lowest_price'
+00:20:30 ERROR:root_logger	Gave up on Collector's Fan O'War
+00:20:39 ERROR:root_logger	'lowest_price'
+00:20:39 ERROR:root_logger	Gave up on Collector's Spy-cicle
+00:21:32 ERROR:root_logger	'lowest_price'
+00:21:32 ERROR:root_logger	Gave up on Collector's Dead Ringer
+00:21:42 ERROR:root_logger	'lowest_price'
+00:21:42 ERROR:root_logger	Gave up on Collector's Diamondback
+00:21:49 INFO:root_logger	Saving lists...
+00:22:00 ERROR:root_logger	'lowest_price'
+00:22:00 ERROR:root_logger	Gave up on Collector's Sandvich
+00:23:09 ERROR:root_logger	'lowest_price'
+00:23:09 ERROR:root_logger	Gave up on Collector's Holiday Punch
+00:23:44 ERROR:root_logger	'lowest_price'
+00:23:44 ERROR:root_logger	Gave up on Collector's Darwin's Danger Shield
+00:23:52 ERROR:root_logger	'lowest_price'
+00:23:52 ERROR:root_logger	Gave up on Collector's Powerjack
+00:24:15 ERROR:root_logger	'lowest_price'
+00:24:15 ERROR:root_logger	Gave up on Spellbook Page
+00:24:30 ERROR:root_logger	'lowest_price'
+00:24:30 ERROR:root_logger	Gave up on Collector's Fortified Compound
+00:25:51 ERROR:root_logger	'lowest_price'
+00:25:51 ERROR:root_logger	Gave up on Collector's Festive Sapper
+00:26:19 ERROR:root_logger	'lowest_price'
+00:26:19 ERROR:root_logger	Gave up on Collector's Festive Jarate
+00:27:07 ERROR:root_logger	'lowest_price'
+00:27:20 ERROR:root_logger	'lowest_price'
+00:27:20 ERROR:root_logger	Gave up on Collector's Mair Mask
+00:27:51 ERROR:root_logger	'lowest_price'
+00:27:51 ERROR:root_logger	Gave up on Strange Voodoo Juju
+00:27:57 ERROR:root_logger	'lowest_price'
+00:27:57 ERROR:root_logger	Gave up on Strange Batsaber
+00:28:27 ERROR:root_logger	'lowest_price'
+00:28:27 ERROR:root_logger	Gave up on Collector's Rocket Jumper
+00:28:43 ERROR:root_logger	'lowest_price'
+00:28:43 ERROR:root_logger	Gave up on Vintage Big Kill
+00:28:43 ERROR:root_logger	list index out of range
+00:28:45 INFO:root_logger	Time passed - 8752.616541862488
+00:28:45 INFO:root_logger	Counter = 1978
+18:07:04 INFO:root_logger	Starting script...
+18:07:17 INFO:root_logger	191.7.201.34:42853
+18:07:17 INFO:root_logger	195.170.15.66:8080
+18:07:17 INFO:root_logger	181.211.167.206:37873
+18:07:17 INFO:root_logger	138.121.32.26:23500
+18:07:17 INFO:root_logger	101.51.141.46:37858
+18:07:17 INFO:root_logger	1.32.59.217:61598
+18:07:17 INFO:root_logger	81.33.4.214:61711
+18:07:17 INFO:root_logger	103.248.14.178:53427
+18:07:17 INFO:root_logger	105.212.11.128:48179
+18:07:17 INFO:root_logger	187.60.161.75:8081
+18:07:17 INFO:root_logger	195.32.14.251:57831
+18:07:17 INFO:root_logger	103.54.221.122:53281
+18:07:17 INFO:root_logger	92.244.36.85:47150
+18:07:17 INFO:root_logger	212.66.117.168:41258
+18:07:17 INFO:root_logger	114.57.185.12:46036
+18:07:17 INFO:root_logger	103.85.63.66:53281
+18:07:17 INFO:root_logger	203.205.34.52:25
+18:07:17 INFO:root_logger	186.225.106.114:38927
+18:07:17 INFO:root_logger	80.48.119.28:8080
+18:07:30 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+18:07:53 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000016FB3036908>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+18:07:57 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000016FB3036DD8>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+18:07:59 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+18:08:22 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000016FB2FF85F8>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+18:08:35 ERROR:root_logger	'lowest_price'
+18:08:39 ERROR:root_logger	'lowest_price'
+18:08:46 ERROR:root_logger	'lowest_price'
+18:08:50 ERROR:root_logger	'lowest_price'
+18:08:57 ERROR:root_logger	'lowest_price'
+18:09:11 ERROR:root_logger	'lowest_price'
+18:09:20 ERROR:root_logger	'lowest_price'
+18:09:23 ERROR:root_logger	'lowest_price'
+18:09:23 ERROR:root_logger	Gave up on Air Strike
+18:09:28 ERROR:root_logger	'lowest_price'
+18:09:28 ERROR:root_logger	Gave up on Ali Baba's Wee Booties
+18:09:35 ERROR:root_logger	'lowest_price'
+18:09:35 ERROR:root_logger	Gave up on Amputator
+18:09:38 ERROR:root_logger	'lowest_price'
+18:09:38 ERROR:root_logger	Gave up on Atomizer
+18:09:44 ERROR:root_logger	'lowest_price'
+18:09:44 ERROR:root_logger	Gave up on B.A.S.E. Jumper
+18:09:54 ERROR:root_logger	'lowest_price'
+18:09:54 ERROR:root_logger	Gave up on Back Scatter
+18:09:58 ERROR:root_logger	'lowest_price'
+18:09:58 ERROR:root_logger	Gave up on Backburner
+18:10:01 ERROR:root_logger	'lowest_price'
+18:10:01 ERROR:root_logger	Gave up on Battalion's Backup
+18:10:05 ERROR:root_logger	'lowest_price'
+18:10:05 ERROR:root_logger	Gave up on Bazaar Bargain
+18:10:08 ERROR:root_logger	'lowest_price'
+18:10:08 ERROR:root_logger	Gave up on Big Earner
+18:10:14 ERROR:root_logger	'lowest_price'
+18:10:14 ERROR:root_logger	Gave up on Blutsauger
+18:10:18 ERROR:root_logger	'lowest_price'
+18:10:18 ERROR:root_logger	Gave up on Bootlegger
+18:10:29 ERROR:root_logger	'lowest_price'
+18:10:29 ERROR:root_logger	Gave up on Brass Beast
+18:10:43 ERROR:root_logger	'lowest_price'
+18:10:43 ERROR:root_logger	Gave up on Buff Banner
+18:10:46 ERROR:root_logger	'lowest_price'
+18:10:46 ERROR:root_logger	Gave up on Buffalo Steak Sandvich
+18:10:51 ERROR:root_logger	'lowest_price'
+18:10:51 ERROR:root_logger	Gave up on Candy Cane
+18:10:55 ERROR:root_logger	'lowest_price'
+18:10:55 ERROR:root_logger	Gave up on Chargin' Targe
+18:11:00 ERROR:root_logger	'lowest_price'
+18:11:00 ERROR:root_logger	Gave up on Claidheamh Mòr
+18:11:07 ERROR:root_logger	'lowest_price'
+18:11:07 ERROR:root_logger	Gave up on Classic
+18:11:35 ERROR:root_logger	'lowest_price'
+18:11:35 ERROR:root_logger	Gave up on Cleaner's Carbine
+18:11:38 ERROR:root_logger	'lowest_price'
+18:11:38 ERROR:root_logger	Gave up on Cloak and Dagger
+18:11:44 ERROR:root_logger	'lowest_price'
+18:11:44 ERROR:root_logger	Gave up on Concheror
+18:11:58 ERROR:root_logger	'lowest_price'
+18:11:58 ERROR:root_logger	Gave up on Cow Mangler 5000
+18:12:16 ERROR:root_logger	'lowest_price'
+18:12:16 ERROR:root_logger	Gave up on Cozy Camper
+18:12:20 ERROR:root_logger	'lowest_price'
+18:12:20 ERROR:root_logger	Gave up on Crusader's Crossbow
+18:12:26 ERROR:root_logger	'lowest_price'
+18:12:26 ERROR:root_logger	Gave up on Dalokohs Bar
+18:12:32 ERROR:root_logger	'lowest_price'
+18:12:32 ERROR:root_logger	Gave up on Darwin's Danger Shield
+18:12:36 ERROR:root_logger	'lowest_price'
+18:12:36 ERROR:root_logger	Gave up on Dead Ringer
+18:12:41 ERROR:root_logger	'lowest_price'
+18:12:41 ERROR:root_logger	Gave up on Degreaser
+18:12:44 ERROR:root_logger	'lowest_price'
+18:12:44 ERROR:root_logger	Gave up on Detonator
+18:12:47 ERROR:root_logger	'lowest_price'
+18:12:47 ERROR:root_logger	Gave up on Diamondback
+18:12:52 ERROR:root_logger	'lowest_price'
+18:12:52 ERROR:root_logger	Gave up on Direct Hit
+18:12:55 ERROR:root_logger	'lowest_price'
+18:12:55 ERROR:root_logger	Gave up on Disciplinary Action
+18:13:00 ERROR:root_logger	'lowest_price'
+18:13:00 ERROR:root_logger	Gave up on Escape Plan
+18:13:05 ERROR:root_logger	'lowest_price'
+18:13:05 ERROR:root_logger	Gave up on Eureka Effect
+18:13:08 ERROR:root_logger	'lowest_price'
+18:13:08 ERROR:root_logger	Gave up on Eviction Notice
+18:13:12 ERROR:root_logger	'lowest_price'
+18:13:12 ERROR:root_logger	Gave up on Eyelander
+18:13:16 ERROR:root_logger	'lowest_price'
+18:13:16 ERROR:root_logger	Gave up on Family Business
+18:13:20 ERROR:root_logger	'lowest_price'
+18:13:20 ERROR:root_logger	Gave up on Fan O'War
+18:13:24 ERROR:root_logger	'lowest_price'
+18:13:24 ERROR:root_logger	Gave up on Flare Gun
+18:13:27 ERROR:root_logger	'lowest_price'
+18:13:27 ERROR:root_logger	Gave up on Force-A-Nature
+18:13:31 ERROR:root_logger	'lowest_price'
+18:13:31 ERROR:root_logger	Gave up on Fortified Compound
+18:13:34 ERROR:root_logger	'lowest_price'
+18:13:34 ERROR:root_logger	Gave up on Frontier Justice
+18:13:38 ERROR:root_logger	'lowest_price'
+18:13:38 ERROR:root_logger	Gave up on Gloves of Running Urgently
+18:13:43 ERROR:root_logger	'lowest_price'
+18:13:43 ERROR:root_logger	Gave up on Gunboats
+18:13:48 ERROR:root_logger	'lowest_price'
+18:13:48 ERROR:root_logger	Gave up on Gunslinger
+18:13:52 ERROR:root_logger	'lowest_price'
+18:13:52 ERROR:root_logger	Gave up on Hitman's Heatmaker
+18:13:56 ERROR:root_logger	'lowest_price'
+18:13:56 ERROR:root_logger	Gave up on Holiday Punch
+18:14:09 ERROR:root_logger	'lowest_price'
+18:14:09 ERROR:root_logger	Gave up on Holy Mackerel
+18:14:12 ERROR:root_logger	'lowest_price'
+18:14:12 ERROR:root_logger	Gave up on Homewrecker
+18:14:17 ERROR:root_logger	'lowest_price'
+18:14:17 ERROR:root_logger	Gave up on Huntsman
+18:14:20 ERROR:root_logger	'lowest_price'
+18:14:20 ERROR:root_logger	Gave up on Iron Bomber
+18:14:26 ERROR:root_logger	'lowest_price'
+18:14:26 ERROR:root_logger	Gave up on Jag
+18:14:33 ERROR:root_logger	'lowest_price'
+18:14:33 ERROR:root_logger	Gave up on Killing Gloves of Boxing
+18:14:36 ERROR:root_logger	'lowest_price'
+18:14:36 ERROR:root_logger	Gave up on Kritzkrieg
+18:14:40 ERROR:root_logger	'lowest_price'
+18:14:40 ERROR:root_logger	Gave up on L'Etranger
+18:14:44 ERROR:root_logger	'lowest_price'
+18:14:44 ERROR:root_logger	Gave up on Liberty Launcher
+18:14:48 ERROR:root_logger	'lowest_price'
+18:14:48 ERROR:root_logger	Gave up on Loch-n-Load
+18:14:55 ERROR:root_logger	'lowest_price'
+18:14:55 ERROR:root_logger	Gave up on Lollichop
+18:15:03 ERROR:root_logger	'lowest_price'
+18:15:03 ERROR:root_logger	Gave up on Loose Cannon
+18:15:08 ERROR:root_logger	'lowest_price'
+18:15:08 ERROR:root_logger	Gave up on Machina
+18:15:11 ERROR:root_logger	'lowest_price'
+18:15:11 ERROR:root_logger	Gave up on Manmelter
+18:15:15 ERROR:root_logger	'lowest_price'
+18:15:15 ERROR:root_logger	Gave up on Mantreads
+18:15:19 ERROR:root_logger	'lowest_price'
+18:15:19 ERROR:root_logger	Gave up on Natascha
+18:15:22 ERROR:root_logger	'lowest_price'
+18:15:22 ERROR:root_logger	Gave up on Nessie's Nine Iron
+18:15:25 ERROR:root_logger	'lowest_price'
+18:15:25 ERROR:root_logger	Gave up on Noise Maker - Winter Holiday
+18:15:29 ERROR:root_logger	'lowest_price'
+18:15:29 ERROR:root_logger	Gave up on Original
+18:15:32 ERROR:root_logger	'lowest_price'
+18:15:32 ERROR:root_logger	Gave up on Panic Attack
+18:15:35 ERROR:root_logger	'lowest_price'
+18:15:35 ERROR:root_logger	Gave up on Phlogistinator
+18:15:39 ERROR:root_logger	'lowest_price'
+18:15:39 ERROR:root_logger	Gave up on Pomson 6000
+18:15:44 ERROR:root_logger	'lowest_price'
+18:15:44 ERROR:root_logger	Gave up on Postal Pummeler
+18:15:48 ERROR:root_logger	'lowest_price'
+18:15:48 ERROR:root_logger	Gave up on Pretty Boy's Pocket Pistol
+18:15:51 ERROR:root_logger	'lowest_price'
+18:15:51 ERROR:root_logger	Gave up on Quickiebomb Launcher
+18:15:55 ERROR:root_logger	'lowest_price'
+18:15:55 ERROR:root_logger	Gave up on Rainblower
+18:15:59 ERROR:root_logger	'lowest_price'
+18:15:59 ERROR:root_logger	Gave up on Red-Tape Recorder
+18:16:02 ERROR:root_logger	'lowest_price'
+18:16:02 ERROR:root_logger	Gave up on Rescue Ranger
+18:16:14 ERROR:root_logger	'lowest_price'
+18:16:14 ERROR:root_logger	Gave up on Reserve Shooter
+18:16:18 ERROR:root_logger	'lowest_price'
+18:16:18 ERROR:root_logger	Gave up on Righteous Bison
+18:16:21 ERROR:root_logger	'lowest_price'
+18:16:21 ERROR:root_logger	Gave up on Sandvich
+18:16:25 ERROR:root_logger	'lowest_price'
+18:16:25 ERROR:root_logger	Gave up on Scotsman's Skullcutter
+18:16:33 ERROR:root_logger	'lowest_price'
+18:16:33 ERROR:root_logger	Gave up on Scottish Handshake
+18:16:36 ERROR:root_logger	'lowest_price'
+18:16:36 ERROR:root_logger	Gave up on Scottish Resistance
+18:16:41 ERROR:root_logger	'lowest_price'
+18:16:46 ERROR:root_logger	'lowest_price'
+18:16:46 ERROR:root_logger	Gave up on Shahanshah
+18:16:55 ERROR:root_logger	'lowest_price'
+18:16:55 ERROR:root_logger	Gave up on Sharpened Volcano Fragment
+18:16:59 ERROR:root_logger	'lowest_price'
+18:16:59 ERROR:root_logger	Gave up on Short Circuit
+18:17:04 ERROR:root_logger	'lowest_price'
+18:17:04 ERROR:root_logger	Gave up on Shortstop
+18:17:07 ERROR:root_logger	'lowest_price'
+18:17:07 ERROR:root_logger	Gave up on Soda Popper
+18:17:11 ERROR:root_logger	'lowest_price'
+18:17:11 ERROR:root_logger	Gave up on Southern Hospitality
+18:17:14 ERROR:root_logger	'lowest_price'
+18:17:14 ERROR:root_logger	Gave up on Splendid Screen
+18:17:18 ERROR:root_logger	'lowest_price'
+18:17:18 ERROR:root_logger	Gave up on Spy-cicle
+18:17:22 ERROR:root_logger	'lowest_price'
+18:17:22 ERROR:root_logger	Gave up on Sun-on-a-Stick
+18:17:25 ERROR:root_logger	'lowest_price'
+18:17:25 ERROR:root_logger	Gave up on Sydney Sleeper
+18:17:28 ERROR:root_logger	'lowest_price'
+18:17:28 ERROR:root_logger	Gave up on Third Degree
+18:17:32 ERROR:root_logger	'lowest_price'
+18:17:32 ERROR:root_logger	Gave up on Tide Turner
+18:17:36 ERROR:root_logger	'lowest_price'
+18:17:36 ERROR:root_logger	Gave up on Tomislav
+18:17:40 ERROR:root_logger	'lowest_price'
+18:17:40 ERROR:root_logger	Gave up on Tribalman's Shiv
+18:17:43 ERROR:root_logger	'lowest_price'
+18:17:43 ERROR:root_logger	Gave up on Ubersaw
+18:17:47 ERROR:root_logger	'lowest_price'
+18:17:47 ERROR:root_logger	Gave up on Ullapool Caber
+18:17:50 ERROR:root_logger	'lowest_price'
+18:17:50 ERROR:root_logger	Gave up on Vaccinator
+18:17:53 ERROR:root_logger	'lowest_price'
+18:17:53 ERROR:root_logger	Gave up on Vita-Saw
+18:17:57 ERROR:root_logger	'lowest_price'
+18:17:57 ERROR:root_logger	Gave up on Warrior's Spirit
+18:18:00 ERROR:root_logger	'lowest_price'
+18:18:00 ERROR:root_logger	Gave up on Widowmaker
+18:18:04 ERROR:root_logger	'lowest_price'
+18:18:04 ERROR:root_logger	Gave up on Winger
+18:18:07 ERROR:root_logger	'lowest_price'
+18:18:07 ERROR:root_logger	Gave up on Wrangler
+18:18:11 ERROR:root_logger	'lowest_price'
+18:18:11 ERROR:root_logger	Gave up on Wrap Assassin
+18:18:14 ERROR:root_logger	'lowest_price'
+18:18:14 ERROR:root_logger	Gave up on Your Eternal Reward
+18:18:29 ERROR:root_logger	'lowest_price'
+18:18:33 ERROR:root_logger	'lowest_price'
+18:18:45 ERROR:root_logger	'lowest_price'
+18:18:59 ERROR:root_logger	'lowest_price'
+18:19:03 ERROR:root_logger	'lowest_price'
+18:20:17 ERROR:root_logger	'lowest_price'
+18:21:24 ERROR:root_logger	'lowest_price'
+18:21:32 ERROR:root_logger	'lowest_price'
+18:21:43 ERROR:root_logger	'lowest_price'
+18:25:12 INFO:root_logger	Saving lists...
+18:44:41 INFO:root_logger	Saving lists...
+19:45:29 INFO:root_logger	Starting script...
+19:46:29 INFO:root_logger	Starting script...
+19:46:41 INFO:root_logger	5.140.233.65:34256
+19:46:41 INFO:root_logger	96.9.69.164:53281
+19:46:41 INFO:root_logger	119.82.253.24:44060
+19:46:41 INFO:root_logger	1.20.99.44:32119
+19:46:41 INFO:root_logger	115.124.86.105:37600
+19:46:41 INFO:root_logger	142.44.243.63:3128
+19:46:41 INFO:root_logger	103.208.152.34:37841
+19:46:41 INFO:root_logger	197.232.69.137:33676
+19:46:41 INFO:root_logger	3.212.104.192:80
+19:46:41 INFO:root_logger	150.107.205.230:8080
+19:46:41 INFO:root_logger	51.68.95.200:8080
+19:46:41 INFO:root_logger	142.93.155.188:3128
+19:46:41 INFO:root_logger	203.145.179.117:8080
+19:46:41 INFO:root_logger	190.7.113.53:80
+19:46:41 INFO:root_logger	85.10.197.9:3128
+19:46:41 INFO:root_logger	95.216.55.148:808
+19:46:41 INFO:root_logger	194.167.44.91:80
+19:46:41 INFO:root_logger	180.249.171.24:80
+19:46:43 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000260B7F56710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',)))
+19:47:06 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000260B7F56BE0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+19:47:08 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 500 Internal Server Error',)))
+19:47:12 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+19:47:17 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+19:47:21 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+19:47:25 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+19:47:29 DEBUG:root_logger	Failed to get response. Retrying. item = Abominable Cosmetic Case #107
+19:48:02 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+19:48:05 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+19:48:06 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+19:48:06 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+19:48:27 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Abominable%20Cosmetic%20Case%20 (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000260B7F97FD0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond',)))
+19:48:33 ERROR:root_logger	'lowest_price'
+19:48:37 ERROR:root_logger	'lowest_price'
+19:48:40 ERROR:root_logger	'lowest_price'
+19:48:43 ERROR:root_logger	'lowest_price'
+19:48:47 ERROR:root_logger	'lowest_price'
+19:48:50 ERROR:root_logger	'lowest_price'
+19:48:57 ERROR:root_logger	'lowest_price'
+19:49:00 ERROR:root_logger	'lowest_price'
+19:49:00 ERROR:root_logger	Gave up on Air Strike
+19:49:04 ERROR:root_logger	'lowest_price'
+19:49:04 ERROR:root_logger	Gave up on Ali Baba's Wee Booties
+19:49:07 ERROR:root_logger	'lowest_price'
+19:49:07 ERROR:root_logger	Gave up on Amputator
+19:49:11 ERROR:root_logger	'lowest_price'
+19:49:11 ERROR:root_logger	Gave up on Atomizer
+19:49:14 ERROR:root_logger	'lowest_price'
+19:49:14 ERROR:root_logger	Gave up on B.A.S.E. Jumper
+19:49:17 ERROR:root_logger	'lowest_price'
+19:49:17 ERROR:root_logger	Gave up on Back Scatter
+19:49:21 ERROR:root_logger	'lowest_price'
+19:49:21 ERROR:root_logger	Gave up on Backburner
+19:49:24 ERROR:root_logger	'lowest_price'
+19:49:24 ERROR:root_logger	Gave up on Battalion's Backup
+19:49:27 ERROR:root_logger	'lowest_price'
+19:49:27 ERROR:root_logger	Gave up on Bazaar Bargain
+19:49:31 ERROR:root_logger	'lowest_price'
+19:49:31 ERROR:root_logger	Gave up on Big Earner
+19:49:34 ERROR:root_logger	'lowest_price'
+19:49:34 ERROR:root_logger	Gave up on Blutsauger
+19:49:38 ERROR:root_logger	'lowest_price'
+19:49:38 ERROR:root_logger	Gave up on Bootlegger
+19:49:41 ERROR:root_logger	'lowest_price'
+19:49:41 ERROR:root_logger	Gave up on Brass Beast
+19:49:44 ERROR:root_logger	'lowest_price'
+19:49:44 ERROR:root_logger	Gave up on Buff Banner
+19:49:48 ERROR:root_logger	'lowest_price'
+19:49:48 ERROR:root_logger	Gave up on Buffalo Steak Sandvich
+19:49:51 ERROR:root_logger	'lowest_price'
+19:49:51 ERROR:root_logger	Gave up on Candy Cane
+19:49:54 ERROR:root_logger	'lowest_price'
+19:49:54 ERROR:root_logger	Gave up on Chargin' Targe
+19:49:58 ERROR:root_logger	'lowest_price'
+19:49:58 ERROR:root_logger	Gave up on Claidheamh Mòr
+19:50:01 ERROR:root_logger	'lowest_price'
+19:50:01 ERROR:root_logger	Gave up on Classic
+19:50:05 ERROR:root_logger	'lowest_price'
+19:50:05 ERROR:root_logger	Gave up on Cleaner's Carbine
+19:50:08 ERROR:root_logger	'lowest_price'
+19:50:08 ERROR:root_logger	Gave up on Cloak and Dagger
+19:50:11 ERROR:root_logger	'lowest_price'
+19:50:11 ERROR:root_logger	Gave up on Concheror
+19:50:15 ERROR:root_logger	'lowest_price'
+19:50:15 ERROR:root_logger	Gave up on Cow Mangler 5000
+19:50:18 ERROR:root_logger	'lowest_price'
+19:50:18 ERROR:root_logger	Gave up on Cozy Camper
+19:50:21 ERROR:root_logger	'lowest_price'
+19:50:21 ERROR:root_logger	Gave up on Crusader's Crossbow
+19:50:25 ERROR:root_logger	'lowest_price'
+19:50:25 ERROR:root_logger	Gave up on Dalokohs Bar
+19:50:28 ERROR:root_logger	'lowest_price'
+19:50:28 ERROR:root_logger	Gave up on Darwin's Danger Shield
+19:50:31 ERROR:root_logger	'lowest_price'
+19:50:31 ERROR:root_logger	Gave up on Dead Ringer
+19:50:35 ERROR:root_logger	'lowest_price'
+19:50:35 ERROR:root_logger	Gave up on Degreaser
+19:50:38 ERROR:root_logger	'lowest_price'
+19:50:38 ERROR:root_logger	Gave up on Detonator
+19:50:42 ERROR:root_logger	'lowest_price'
+19:50:42 ERROR:root_logger	Gave up on Diamondback
+19:50:45 ERROR:root_logger	'lowest_price'
+19:50:45 ERROR:root_logger	Gave up on Direct Hit
+19:50:48 ERROR:root_logger	'lowest_price'
+19:50:48 ERROR:root_logger	Gave up on Disciplinary Action
+19:50:52 ERROR:root_logger	'lowest_price'
+19:50:52 ERROR:root_logger	Gave up on Escape Plan
+19:50:55 ERROR:root_logger	'lowest_price'
+19:50:55 ERROR:root_logger	Gave up on Eureka Effect
+19:50:58 ERROR:root_logger	'lowest_price'
+19:50:58 ERROR:root_logger	Gave up on Eviction Notice
+19:51:02 ERROR:root_logger	'lowest_price'
+19:51:02 ERROR:root_logger	Gave up on Eyelander
+19:51:05 ERROR:root_logger	'lowest_price'
+19:51:05 ERROR:root_logger	Gave up on Family Business
+19:51:09 ERROR:root_logger	'lowest_price'
+19:51:09 ERROR:root_logger	Gave up on Fan O'War
+19:51:12 ERROR:root_logger	'lowest_price'
+19:51:12 ERROR:root_logger	Gave up on Flare Gun
+19:51:16 ERROR:root_logger	'lowest_price'
+19:51:16 ERROR:root_logger	Gave up on Force-A-Nature
+19:51:19 ERROR:root_logger	'lowest_price'
+19:51:19 ERROR:root_logger	Gave up on Fortified Compound
+19:51:22 ERROR:root_logger	'lowest_price'
+19:51:22 ERROR:root_logger	Gave up on Frontier Justice
+19:51:26 ERROR:root_logger	'lowest_price'
+19:51:26 ERROR:root_logger	Gave up on Gloves of Running Urgently
+19:51:29 ERROR:root_logger	'lowest_price'
+19:51:29 ERROR:root_logger	Gave up on Gunboats
+19:51:33 ERROR:root_logger	'lowest_price'
+19:51:33 ERROR:root_logger	Gave up on Gunslinger
+19:51:36 ERROR:root_logger	'lowest_price'
+19:51:36 ERROR:root_logger	Gave up on Hitman's Heatmaker
+19:51:39 ERROR:root_logger	'lowest_price'
+19:51:39 ERROR:root_logger	Gave up on Holiday Punch
+19:51:43 ERROR:root_logger	'lowest_price'
+19:51:43 ERROR:root_logger	Gave up on Holy Mackerel
+19:51:46 ERROR:root_logger	'lowest_price'
+19:51:46 ERROR:root_logger	Gave up on Homewrecker
+19:51:50 ERROR:root_logger	'lowest_price'
+19:51:50 ERROR:root_logger	Gave up on Huntsman
+19:51:53 ERROR:root_logger	'lowest_price'
+19:51:53 ERROR:root_logger	Gave up on Iron Bomber
+19:51:56 ERROR:root_logger	'lowest_price'
+19:51:56 ERROR:root_logger	Gave up on Jag
+19:52:00 ERROR:root_logger	'lowest_price'
+19:52:00 ERROR:root_logger	Gave up on Killing Gloves of Boxing
+19:52:03 ERROR:root_logger	'lowest_price'
+19:52:03 ERROR:root_logger	Gave up on Kritzkrieg
+19:52:06 ERROR:root_logger	'lowest_price'
+19:52:06 ERROR:root_logger	Gave up on L'Etranger
+19:52:10 ERROR:root_logger	'lowest_price'
+19:52:10 ERROR:root_logger	Gave up on Liberty Launcher
+19:52:13 ERROR:root_logger	'lowest_price'
+19:52:13 ERROR:root_logger	Gave up on Loch-n-Load
+19:52:16 ERROR:root_logger	'lowest_price'
+19:52:16 ERROR:root_logger	Gave up on Lollichop
+19:52:20 ERROR:root_logger	'lowest_price'
+19:52:20 ERROR:root_logger	Gave up on Loose Cannon
+19:52:23 ERROR:root_logger	'lowest_price'
+19:52:23 ERROR:root_logger	Gave up on Machina
+19:52:27 ERROR:root_logger	'lowest_price'
+19:52:27 ERROR:root_logger	Gave up on Manmelter
+19:52:30 ERROR:root_logger	'lowest_price'
+19:52:30 ERROR:root_logger	Gave up on Mantreads
+19:52:33 ERROR:root_logger	'lowest_price'
+19:52:33 ERROR:root_logger	Gave up on Natascha
+19:52:37 ERROR:root_logger	'lowest_price'
+19:52:37 ERROR:root_logger	Gave up on Nessie's Nine Iron
+19:52:40 ERROR:root_logger	'lowest_price'
+19:52:40 ERROR:root_logger	Gave up on Noise Maker - Winter Holiday
+19:52:43 ERROR:root_logger	'lowest_price'
+19:52:43 ERROR:root_logger	Gave up on Original
+19:52:47 ERROR:root_logger	'lowest_price'
+19:52:47 ERROR:root_logger	Gave up on Panic Attack
+19:52:50 ERROR:root_logger	'lowest_price'
+19:52:50 ERROR:root_logger	Gave up on Phlogistinator
+19:52:54 ERROR:root_logger	'lowest_price'
+19:52:54 ERROR:root_logger	Gave up on Pomson 6000
+19:52:57 ERROR:root_logger	'lowest_price'
+19:52:57 ERROR:root_logger	Gave up on Postal Pummeler
+19:53:00 ERROR:root_logger	'lowest_price'
+19:53:00 ERROR:root_logger	Gave up on Pretty Boy's Pocket Pistol
+19:53:04 ERROR:root_logger	'lowest_price'
+19:53:04 ERROR:root_logger	Gave up on Quickiebomb Launcher
+19:53:07 ERROR:root_logger	'lowest_price'
+19:53:07 ERROR:root_logger	Gave up on Rainblower
+19:53:11 ERROR:root_logger	'lowest_price'
+19:53:11 ERROR:root_logger	Gave up on Red-Tape Recorder
+19:53:14 ERROR:root_logger	'lowest_price'
+19:53:14 ERROR:root_logger	Gave up on Rescue Ranger
+19:53:17 ERROR:root_logger	'lowest_price'
+19:53:17 ERROR:root_logger	Gave up on Reserve Shooter
+19:53:21 ERROR:root_logger	'lowest_price'
+19:53:21 ERROR:root_logger	Gave up on Righteous Bison
+19:53:24 ERROR:root_logger	'lowest_price'
+19:53:24 ERROR:root_logger	Gave up on Sandvich
+19:53:27 ERROR:root_logger	'lowest_price'
+19:53:27 ERROR:root_logger	Gave up on Scotsman's Skullcutter
+19:53:31 ERROR:root_logger	'lowest_price'
+19:53:31 ERROR:root_logger	Gave up on Scottish Handshake
+19:53:34 ERROR:root_logger	'lowest_price'
+19:53:34 ERROR:root_logger	Gave up on Scottish Resistance
+19:53:37 ERROR:root_logger	'lowest_price'
+19:53:41 ERROR:root_logger	'lowest_price'
+19:53:41 ERROR:root_logger	Gave up on Shahanshah
+19:53:44 ERROR:root_logger	'lowest_price'
+19:53:44 ERROR:root_logger	Gave up on Sharpened Volcano Fragment
+19:53:47 ERROR:root_logger	'lowest_price'
+19:53:47 ERROR:root_logger	Gave up on Short Circuit
+19:53:51 ERROR:root_logger	'lowest_price'
+19:53:51 ERROR:root_logger	Gave up on Shortstop
+19:53:54 ERROR:root_logger	'lowest_price'
+19:53:54 ERROR:root_logger	Gave up on Soda Popper
+19:53:58 ERROR:root_logger	'lowest_price'
+19:53:58 ERROR:root_logger	Gave up on Southern Hospitality
+19:54:01 ERROR:root_logger	'lowest_price'
+19:54:01 ERROR:root_logger	Gave up on Splendid Screen
+19:54:05 ERROR:root_logger	'lowest_price'
+19:54:05 ERROR:root_logger	Gave up on Spy-cicle
+19:54:08 ERROR:root_logger	'lowest_price'
+19:54:08 ERROR:root_logger	Gave up on Sun-on-a-Stick
+19:54:11 ERROR:root_logger	'lowest_price'
+19:54:11 ERROR:root_logger	Gave up on Sydney Sleeper
+19:54:15 ERROR:root_logger	'lowest_price'
+19:54:15 ERROR:root_logger	Gave up on Third Degree
+19:54:18 ERROR:root_logger	'lowest_price'
+19:54:18 ERROR:root_logger	Gave up on Tide Turner
+19:54:22 ERROR:root_logger	'lowest_price'
+19:54:22 ERROR:root_logger	Gave up on Tomislav
+19:54:25 ERROR:root_logger	'lowest_price'
+19:54:25 ERROR:root_logger	Gave up on Tribalman's Shiv
+19:54:28 ERROR:root_logger	'lowest_price'
+19:54:28 ERROR:root_logger	Gave up on Ubersaw
+19:54:32 ERROR:root_logger	'lowest_price'
+19:54:32 ERROR:root_logger	Gave up on Ullapool Caber
+19:54:35 ERROR:root_logger	'lowest_price'
+19:54:35 ERROR:root_logger	Gave up on Vaccinator
+19:54:38 ERROR:root_logger	'lowest_price'
+19:54:38 ERROR:root_logger	Gave up on Vita-Saw
+19:54:42 ERROR:root_logger	'lowest_price'
+19:54:42 ERROR:root_logger	Gave up on Warrior's Spirit
+19:54:45 ERROR:root_logger	'lowest_price'
+19:54:45 ERROR:root_logger	Gave up on Widowmaker
+19:54:48 ERROR:root_logger	'lowest_price'
+19:54:48 ERROR:root_logger	Gave up on Winger
+19:54:52 ERROR:root_logger	'lowest_price'
+19:54:52 ERROR:root_logger	Gave up on Wrangler
+19:54:55 ERROR:root_logger	'lowest_price'
+19:54:55 ERROR:root_logger	Gave up on Wrap Assassin
+19:54:58 ERROR:root_logger	'lowest_price'
+19:54:58 ERROR:root_logger	Gave up on Your Eternal Reward
+19:55:12 ERROR:root_logger	'lowest_price'
+19:55:15 ERROR:root_logger	'lowest_price'
+19:55:25 ERROR:root_logger	'lowest_price'
+19:55:42 ERROR:root_logger	'lowest_price'
+19:57:43 ERROR:root_logger	'lowest_price'
+19:57:54 ERROR:root_logger	'lowest_price'
+19:58:00 ERROR:root_logger	'lowest_price'
+19:58:10 ERROR:root_logger	'lowest_price'
+20:00:08 INFO:root_logger	Saving lists...
+20:05:46 INFO:root_logger	Saving lists...
+20:11:24 INFO:root_logger	Saving lists...
+20:16:32 ERROR:root_logger	'lowest_price'
+20:17:02 INFO:root_logger	Saving lists...
+20:17:07 ERROR:root_logger	'lowest_price'
+20:18:24 ERROR:root_logger	'lowest_price'
+20:19:38 ERROR:root_logger	'lowest_price'
+20:20:09 ERROR:root_logger	'lowest_price'
+20:21:50 ERROR:root_logger	NULL IN SOURCE
+20:21:50 INFO:root_logger	Counter = 485
+20:21:59 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Hot%20Heels (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))
+20:22:03 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:22:04 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+20:23:04 INFO:root_logger	Saving lists...
+20:25:43 ERROR:root_logger	'lowest_price'
+20:28:16 INFO:root_logger	Saving lists...
+20:28:38 ERROR:root_logger	'lowest_price'
+20:33:29 INFO:root_logger	Saving lists...
+20:38:42 INFO:root_logger	Saving lists...
+20:38:49 ERROR:root_logger	'lowest_price'
+20:39:07 ERROR:root_logger	'lowest_price'
+20:40:53 ERROR:root_logger	'lowest_price'
+20:43:53 INFO:root_logger	Saving lists...
+20:47:50 ERROR:root_logger	'lowest_price'
+20:49:04 INFO:root_logger	Saving lists...
+20:53:08 ERROR:root_logger	NULL IN SOURCE
+20:53:08 INFO:root_logger	Counter = 1078
+20:54:10 ERROR:root_logger	'lowest_price'
+20:54:26 INFO:root_logger	Saving lists...
+20:58:27 ERROR:root_logger	'lowest_price'
+21:00:09 INFO:root_logger	Saving lists...
+21:00:13 ERROR:root_logger	'lowest_price'
+21:05:38 ERROR:root_logger	'lowest_price'
+21:05:38 ERROR:root_logger	Gave up on Strange Employee of the Mmmph
+21:05:55 INFO:root_logger	Saving lists...
+21:09:56 ERROR:root_logger	'lowest_price'
+21:11:38 INFO:root_logger	Saving lists...
+21:15:08 ERROR:root_logger	'lowest_price'
+21:15:08 ERROR:root_logger	Gave up on Flash of Inspiration
+21:17:25 INFO:root_logger	Saving lists...
+21:23:08 INFO:root_logger	Saving lists...
+21:24:44 ERROR:root_logger	'lowest_price'
+21:25:29 ERROR:root_logger	'lowest_price'
+21:25:29 ERROR:root_logger	Gave up on Strange Antarctic Researcher
+21:27:29 ERROR:root_logger	NULL IN SOURCE
+21:27:29 INFO:root_logger	Counter = 1675
+21:27:52 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+21:27:59 ERROR:root_logger	Expecting value: line 1 column 1 (char 0)
+21:27:59 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Genuine%20Sharp%20Dresser (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response',)))
+21:27:59 DEBUG:root_logger	Used up all proxies! Refreshing
+21:28:10 INFO:root_logger	178.62.50.189:3128
+21:28:10 INFO:root_logger	142.44.243.63:3128
+21:28:10 INFO:root_logger	104.236.54.196:8080
+21:28:10 INFO:root_logger	176.119.134.143:23500
+21:28:10 INFO:root_logger	118.172.201.80:56686
+21:28:10 INFO:root_logger	197.232.36.36:32498
+21:28:10 INFO:root_logger	72.249.171.210:8080
+21:28:10 INFO:root_logger	217.8.227.22:44271
+21:28:10 INFO:root_logger	180.253.232.32:53281
+21:28:10 INFO:root_logger	194.167.44.91:80
+21:28:10 INFO:root_logger	180.249.171.24:80
+21:28:10 INFO:root_logger	196.1.184.6:40407
+21:28:10 INFO:root_logger	202.93.115.230:48526
+21:28:13 ERROR:root_logger	HTTPSConnectionPool(host='steamcommunity.com', port=443): Max retries exceeded with url: /market/priceoverview/?country=US&currency=1&appid=440&market_hash_name=Genuine%20Sharp%20Dresser (Caused by ProxyError('Cannot connect to proxy.', OSError('Tunnel connection failed: 500 Internal Server Error',)))
+21:29:38 INFO:root_logger	Saving lists...
+21:30:20 ERROR:root_logger	'lowest_price'
+21:30:20 ERROR:root_logger	Gave up on Collector's Killing Gloves of Boxing
+21:32:15 ERROR:root_logger	'lowest_price'
+21:32:15 ERROR:root_logger	Gave up on Collector's Gloves of Running Urgently
+21:33:25 ERROR:root_logger	'lowest_price'
+21:33:25 ERROR:root_logger	Gave up on Collector's Overdose
+21:33:34 ERROR:root_logger	'lowest_price'
+21:33:34 ERROR:root_logger	Gave up on Collector's Wrap Assassin
+21:35:12 INFO:root_logger	Saving lists...
+21:35:39 ERROR:root_logger	'lowest_price'
+21:35:39 ERROR:root_logger	Gave up on Collector's Baby Face's Blaster
+21:35:48 ERROR:root_logger	'lowest_price'
+21:35:48 ERROR:root_logger	Gave up on Collector's Enforcer
+21:36:14 ERROR:root_logger	'lowest_price'
+21:36:14 ERROR:root_logger	Gave up on Collector's Sun-on-a-Stick
+21:37:31 ERROR:root_logger	'lowest_price'
+21:37:31 ERROR:root_logger	Gave up on Collector's Brass Beast
+21:37:53 ERROR:root_logger	'lowest_price'
+21:37:53 ERROR:root_logger	Gave up on Collector's Beggar's Bazooka
+21:38:22 ERROR:root_logger	'lowest_price'
+21:38:22 ERROR:root_logger	Gave up on Collector's Sharpened Volcano Fragment
+21:39:55 ERROR:root_logger	'lowest_price'
+21:39:55 ERROR:root_logger	Gave up on Collector's Southern Hospitality
+21:40:07 ERROR:root_logger	'lowest_price'
+21:40:07 ERROR:root_logger	Gave up on Collector's Fan O'War
+21:40:14 ERROR:root_logger	'lowest_price'
+21:40:14 ERROR:root_logger	Gave up on Collector's Spy-cicle
+21:40:52 ERROR:root_logger	'lowest_price'
+21:40:52 ERROR:root_logger	Gave up on Collector's Dead Ringer
+21:40:58 ERROR:root_logger	'lowest_price'
+21:40:58 ERROR:root_logger	Gave up on Collector's Diamondback
+21:41:07 INFO:root_logger	Saving lists...
+21:41:11 ERROR:root_logger	'lowest_price'
+21:41:11 ERROR:root_logger	Gave up on Collector's Sandvich
+21:42:01 ERROR:root_logger	'lowest_price'
+21:42:01 ERROR:root_logger	Gave up on Collector's Holiday Punch
+21:42:27 ERROR:root_logger	'lowest_price'
+21:42:27 ERROR:root_logger	Gave up on Collector's Darwin's Danger Shield
+21:42:33 ERROR:root_logger	'lowest_price'
+21:42:33 ERROR:root_logger	Gave up on Collector's Powerjack
+21:42:49 ERROR:root_logger	'lowest_price'
+21:42:49 ERROR:root_logger	Gave up on Spellbook Page
+21:42:59 ERROR:root_logger	'lowest_price'
+21:42:59 ERROR:root_logger	Gave up on Collector's Fortified Compound
+21:43:49 ERROR:root_logger	'lowest_price'
+21:43:49 ERROR:root_logger	Gave up on Collector's Festive Sapper
+21:44:08 ERROR:root_logger	'lowest_price'
+21:44:08 ERROR:root_logger	Gave up on Collector's Festive Jarate
+21:44:46 ERROR:root_logger	'lowest_price'
+21:44:46 ERROR:root_logger	Gave up on Strange Australium Wrench
+21:44:56 ERROR:root_logger	'lowest_price'
+21:44:56 ERROR:root_logger	Gave up on Collector's Mair Mask
+21:45:18 ERROR:root_logger	'lowest_price'
+21:45:18 ERROR:root_logger	Gave up on Strange Voodoo Juju
+21:45:22 ERROR:root_logger	'lowest_price'
+21:45:22 ERROR:root_logger	Gave up on Strange Batsaber
+21:45:51 ERROR:root_logger	'lowest_price'
+21:45:51 ERROR:root_logger	Gave up on Vintage Big Kill
+21:45:51 ERROR:root_logger	list index out of range
+21:45:53 INFO:root_logger	Time passed - 7139.313249588013
+21:45:53 INFO:root_logger	Counter = 1977

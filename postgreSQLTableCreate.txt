@@ -4,3 +4,7 @@ CREATE TABLE tf2 (
 	price	INTEGER		NULL,
 	volume	INTEGER		NULL
 );
+
+CREATE TABLE tf2_item_names (
+	name	VARCHAR(110)	NOT NULL
+);
