@@ -9,14 +9,17 @@ weightingInterval :: Int -> Double
 weightingInterval n = (fromIntegral 1) / fromIntegral (n + 1)
 
 weightedAverage :: [Double] -> Double
-weightedAverage (x:xs) = (sum $ (zipWith(*) (x:xs) [1 - interval, (1 - (2 * interval)) .. 0])) / (fromIntegral(length xs + 1) / 2)
+weightedAverage (x:xs) =
+    (sum $ (zipWith(*) (x:xs) [1 - interval, (1 - (2 * interval)) .. 0])) / (fromIntegral(length xs + 1) / 2)
     where interval = (weightingInterval ((length xs) + 1))
 
-{-
-flag :: [Double] -> Bool
-flag (x:xs) =
-    let average = weightedAverage xs
--}
+percentError :: Double -> Double -> Double
+percentError a b = ((a - b) / b) * 100
+
+jump :: [Double] -> Bool
+jump (x:xs) = abs (percentError x (weightedAverage xs)) > 15
+
+    
 
 
 {-
