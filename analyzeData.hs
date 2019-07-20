@@ -1,13 +1,14 @@
 import Data.Function;
+
+-- wI 5; 0.4 0.25 0.125 
+weightingInterval :: Int -> Double
+weightingInterval n = (fromIntegral 1) / fromIntegral (n + 1)
+
 {-
 This function returns an average of a list
 such that the values towards the beginning are
 given higher weighting than those at the end
 -}
--- wI 5; 0.4 0.25 0.125 
-weightingInterval :: Int -> Double
-weightingInterval n = (fromIntegral 1) / fromIntegral (n + 1)
-
 weightedAverage :: [Double] -> Double
 weightedAverage (x:xs) =
     (sum $ (zipWith(*) (x:xs) [1 - interval, (1 - (2 * interval)) .. 0])) / (fromIntegral(length xs + 1) / 2)
@@ -16,8 +17,8 @@ weightedAverage (x:xs) =
 percentError :: Double -> Double -> Double
 percentError a b = ((a - b) / b) * 100
 
-jump :: [Double] -> Bool
-jump (x:xs) = abs (percentError x (weightedAverage xs)) > 15
+fluctuation :: [Double] -> Bool
+fluctuation (x:xs) = abs (percentError x (weightedAverage xs)) > 15
 
     
 
