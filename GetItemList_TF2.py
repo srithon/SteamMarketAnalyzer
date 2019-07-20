@@ -44,7 +44,7 @@ def main():
         if start % 5_000 == 0:
             connection.commit()
             print('Committing...')
-    print('Exitting...')
+    print('Exiting...')
     s.close()
     connection.commit()
     cursor.close()
