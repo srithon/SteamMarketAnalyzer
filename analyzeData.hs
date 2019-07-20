@@ -17,10 +17,11 @@ weightedAverage (x:xs) =
 percentError :: Double -> Double -> Double
 percentError a b = ((a - b) / b) * 100
 
-fluctuation :: [Double] -> Bool
-fluctuation (x:xs) = abs (percentError x (weightedAverage xs)) > 15
+fluctuationFirstToRest :: [Double] -> Double
+fluctuationFirstToRest (x:xs) = abs (percentError x (weightedAverage xs))
 
-    
+fluctuation :: [Double] -> Bool
+fluctuation (x:xs) = fluctuationFirstToRest (x:xs) > 15
 
 
 {-
