@@ -2,11 +2,6 @@ import requests
 
 import psycopg2
 
-import mysql.connector
-from mysql.connector import Error
-from mysql.connector import errorcode
-from mysql.connector.errors import IntegrityError
-
 from time import sleep, time
 
 import math
@@ -68,13 +63,6 @@ with open('password.txt', 'r') as password_file:
 
 cursor = connection.cursor()
 
-mysql_connection = mysql.connector.connect(host='localhost',
-                             database='tf2metalvsmarketprice',
-                             user='root',
-                             password='LrD3FZGUz5JXy5c')
-
-mysql_cursor = mysql_connection.cursor()
-
 proxy_page = 1
 
 proxy_url='https://free-proxy-list.net/anonymous-proxy.html'
@@ -86,6 +74,8 @@ s = None
 proxies = list()
 
 items = list()
+
+counter = 0
 
 def save_lists():
     connection.commit()
@@ -173,15 +163,9 @@ def get_proxy_dict(current_proxy):
 def refresh_database():
     global items
     # cursor.execute('SELECT ItemName FROM `item list steam market tf2 tf2` WHERE PriceValue IS NULL ORDER BY PointValue ASC')
-    mysql_cursor.execute('SELECT name FROM `tf2 metal vs steam market prices` WHERE name NOT LIKE "%(Non-Craftable)" AND realPrice IS NOT NULL ORDER BY metalPrice ASC')
+    cursor.execute('SELECT name FROM tf2_item_names')
     items.clear()
-    items = [item[0] for item in mysql_cursor.fetchall()]
-
-def close_mysql_connection():
-    if mysql_connection.is_connected():
-        mysql_connection.commit()
-        mysql_connection.close()
-        mysql_cursor.close()
+    items = [item[0] for item in cursor.fetchall()]
 
 def shutdown():
     global s
@@ -202,7 +186,7 @@ def shutdown():
     final_time = time()
     print('Time passed - {}'.format(final_time - init_time))
     logger.info('Time passed - {}'.format(final_time - init_time))
-    logger.info('Counter = {}'.format(count))
+    logger.info('Counter = {}'.format(counter))
 
     s = None
 
@@ -212,7 +196,7 @@ def shutdown():
 
 
 def main(delay):
-    global init_time, items, proxies, s
+    global init_time, items, proxies, s, counter
     proxies = get_proxies()
     if proxies == None:
         logger.error('No proxies found!')
@@ -220,12 +204,10 @@ def main(delay):
     proxy_dict = get_proxy_dict(get_new_proxy())
     s = requests.Session()
     init_time = time()
-    counter = 0
     try:
         broken = True
 
         refresh_database()
-        close_mysql_connection()
         
         failures = 0
         
@@ -355,7 +337,7 @@ def main(delay):
 last_count = 0
 
 try:
-    count = main(delay)
+    main(delay)
 except Exception as e:
     print(e)
 finally:
