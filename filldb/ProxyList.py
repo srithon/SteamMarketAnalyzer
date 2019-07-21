@@ -5,14 +5,17 @@ from time import sleep, time
 
 import os
 
+import threading
+
 class ProxyList:
     initial_url = 'https://free-proxy-list.net/anonymous-proxy.html'
 
     def __init__(self):
-        self.url = initial_url
+        self.url = ProxyList.initial_url
         self.proxy_page = 0
         self.proxies = list()
         self.refresh_proxies()
+        self.lock = threading.Lock()
     
     def refresh_proxies(self):
         options = webdriver.FirefoxOptions()
@@ -63,7 +66,7 @@ class ProxyList:
         proxies_body = driver.find_element_by_css_selector('#proxylisttable > tbody:nth-child(2)')
         proxies = proxies_body.find_elements_by_xpath('.//tr')
         print('{} proxies found in total'.format(len(proxies)))
-        if len(proxies) == 0:
+        if not proxies:
             print('No Proxies Found!')
             return None
         
@@ -75,16 +78,16 @@ class ProxyList:
             print('{}:{}'.format(ip, port))
             self.proxies.append('{}:{}'.format(ip, port))
         os.system('taskkill /f /im geckodriver.exe /T')
-    
-def get_new_proxy(self):
-    print('{} proxies remaining'.format(len(self.proxies)))
-    if len(self.proxies) == 0:
-        self.refresh_proxies()
-    return self.proxies.pop(int(random() * len(self.proxies)))
+        
+    def get_new_proxy(self):
+        print('{} proxies remaining'.format(len(self.proxies)))
+        if not self.proxies:
+            self.refresh_proxies()
+        return self.proxies.pop(int(random() * len(self.proxies)))
 
-def synchronized_get_new_proxy_dict(self):
-    with self.lock:
-        return self.get_proxy_dict(self.get_new_proxy())
+    def synchronized_get_new_proxy_dict(self):
+        with self.lock:
+            return self.get_proxy_dict(self.get_new_proxy())
 
-def get_proxy_dict(current_proxy):
-    return { "https" : str(current_proxy) }
+    def get_proxy_dict(self, current_proxy):
+        return { "https" : str(current_proxy) }

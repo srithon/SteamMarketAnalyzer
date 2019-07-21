@@ -1,5 +1,5 @@
 import ProxyList
-# import requests
+import requests
 import asyncio
 import math
 
@@ -7,12 +7,13 @@ class Worker:
     proxies_per_worker = 3
     delay = 2.5
 
-    def __init__(self, cursor, proxies, item_list):
-        self.cursor = cursor
+    def __init__(self, cursor_wrapper, proxies, item_list):
+        self.cursor = cursor_wrapper
         self.proxies = proxies
         self.reserved_proxies = list()
         self.item_list = item_list
-        # self.session = requests.Session()
+        self.http_session = requests.Session()
+        self.counter = 0
         for _ in range(Worker.proxies_per_worker):
             self.reserved_proxies.append(self.new_proxy())
     
@@ -20,17 +21,20 @@ class Worker:
         return self.proxies.synchronized_get_new_proxy_dict()
     
     def process_item(self, pid):
-        if self.item_list.is_empty():
+        if not self.item_list:
             return
-        item = self.item_list.pop(0)
+        try:
+            item = self.item_list.pop(0)
+        except Exception as e:
+            print(f'Error in process_item->item_list.pop(): {e}')
 
-        while True:
-            try:
-                response = self.session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
-                break
-            except Exception as e:
-                print(f'{pid}: {e}')
-                self.reserved_proxies[pid] = self.new_proxy
+        #while True:
+        #    try:
+        response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
+        #        break
+        #   except Exception as e:
+        #        print(f'{pid}: {e}')
+        #        self.reserved_proxies[pid] = self.new_proxy
 
         try:
             lowest_price = response['lowest_price'][1:]
@@ -55,11 +59,25 @@ class Worker:
         
         query = 'INSERT INTO tf2(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
         self.cursor.execute(query, (item, price, volume))
+        
+        self.counter += 1
+        print(f'Worker \'{threading.current_thread.name}\': Iteration #{self.counter}')
+        if self.counter % 200 == 0:
+            self.cursor.request_commit()
     
     def test_async_function(self, pid):
         print(pid)
+        
+    async def internal_process_items(self, pid):
+        while self.item_list:
+            self.process_item(pid)
+            await asyncio.sleep(Worker.delay)
 
-    async def process_items(self, pid):
-        while True:
-            test_async_function(pid)
-            asyncio.sleep(Worker.delay)
+    async def process_items(self):
+        await asyncio.gather(*[self.internal_process_items(index) for index in range(Worker.proxies_per_worker)])
+    
+    def start_worker(self, event_loop):
+        try:
+            event_loop.run_until_complete(self.process_items())
+        finally:
+            event_loop.close()
