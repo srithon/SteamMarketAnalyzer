@@ -69,6 +69,7 @@ class CursorWrapper:
         self.db_cursor = db_cursor
         self.commit_requests = 0
         self.lock = threading.Lock()
+        self.last_commit = 0
     
     def request_commit(self):
         with self.lock:
@@ -77,6 +78,7 @@ class CursorWrapper:
             if time() - self.last_commit > 300 and self.commit_requests > 1:
                 self.db_cursor.connection.commit()
                 self.commit_requests = 0
+                self.last_commit = time()
     
     def execute(self, query, args):
         self.db_cursor.execute(query, args)
