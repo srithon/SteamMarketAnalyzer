@@ -21,7 +21,7 @@ class Worker:
     def new_proxy(self):
         return self.proxies.synchronized_get_new_proxy_dict()
     
-    def process_item(self, pid):
+    async def process_item(self, pid):
         if not self.item_list:
             return
         try:
@@ -32,6 +32,7 @@ class Worker:
         while True:
             try:
                 response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
+                await asyncio.sleep(0)
                 break
             except Exception as e:
                 print(f'{pid}: {e}')
@@ -71,7 +72,7 @@ class Worker:
         
     async def internal_process_items(self, pid):
         while self.item_list:
-            self.process_item(pid)
+            await self.process_item(pid)
             await asyncio.sleep(Worker.delay)
 
     async def process_items(self):
