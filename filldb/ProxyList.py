@@ -24,7 +24,12 @@ class ProxyList:
         options = webdriver.FirefoxOptions()
         options.add_argument('--headless')
         
-        driver = webdriver.Firefox(firefox_options=options)
+        while True:
+            try:
+                driver = webdriver.Firefox(firefox_options=options)
+                break
+            except Exception as e:
+                print(e)
         
         while True:
             try:
