@@ -29,13 +29,13 @@ class Worker:
         except Exception as e:
             print(f'Error in process_item->item_list.pop(): {e}')
 
-        #while True:
-        #    try:
-        response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
-        #        break
-        #   except Exception as e:
-        #        print(f'{pid}: {e}')
-        #        self.reserved_proxies[pid] = self.new_proxy
+        while True:
+            try:
+                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
+                break
+            except Exception as e:
+                print(f'{pid}: {e}')
+                self.reserved_proxies[pid] = self.new_proxy()
 
         try:
             lowest_price = response['lowest_price'][1:]

@@ -56,6 +56,7 @@ class Controller:
             event_loop.close()
             
         for t in self.worker_threads:
+            print('Joining thread')
             try:
                 t.join()
             except KeyboardInterrupt:
