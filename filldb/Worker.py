@@ -62,7 +62,7 @@ class Worker:
         self.cursor.execute(query, (item, price, volume))
         
         self.counter += 1
-        print(f'Worker \'{threading.current_thread.name}\': Iteration #{self.counter}')
+        print(f'Worker \'{threading.current_thread().name}\': Iteration #{self.counter}')
         if self.counter % 200 == 0:
             self.cursor.request_commit()
     
