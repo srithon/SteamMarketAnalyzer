@@ -81,10 +81,10 @@ def get_new_proxy(self):
     if len(self.proxies) == 0:
         self.refresh_proxies()
     return self.proxies.pop(int(random() * len(self.proxies)))
-    
-def synchronized_get_new_proxy(self):
+
+def synchronized_get_new_proxy_dict(self):
     with self.lock:
-        return self.get_new_proxy()
+        return self.get_proxy_dict(self.get_new_proxy())
 
 def get_proxy_dict(current_proxy):
     return { "https" : str(current_proxy) }
