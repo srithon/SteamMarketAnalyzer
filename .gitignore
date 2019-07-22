@@ -1,3 +1,4 @@
 password.txt
 *.swp
 *.log
+filldb/__pycache__/*
