@@ -6,7 +6,7 @@ import threading
 
 class Worker:
     proxies_per_worker = 3
-    delay = 2.5
+    delay = 1.5
 
     def __init__(self, cursor_wrapper, proxies, item_list):
         self.cursor = cursor_wrapper
@@ -27,7 +27,8 @@ class Worker:
         try:
             item = self.item_list.pop(0)
         except Exception as e:
-            print(f'Error in process_item->item_list.pop(): {e}')
+            pass
+            # print(f'Error in process_item->item_list.pop(): {e}')
 
         while True:
             try:
@@ -35,7 +36,7 @@ class Worker:
                 await asyncio.sleep(0)
                 break
             except Exception as e:
-                print(f'{pid}: {e}')
+                # print(f'{pid}: {e}')
                 self.reserved_proxies[pid] = self.new_proxy()
 
         try:
@@ -44,14 +45,12 @@ class Worker:
             try:
                 lowest_price = response['median_price'][1:]
             except:
-                print(f'Gave up on {item}')
+                # print(f'Gave up on {item}')
                 return
 
         try:
             price = math.floor(float(lowest_price.replace(',' , '')) * 100)
         except Exception as e:
-            print(e)
-            print('--------Price failed-----------')
             return
         
         try:
@@ -63,8 +62,9 @@ class Worker:
         self.cursor.execute(query, (item, price, volume))
         
         self.counter += 1
-        print(f'Worker \'{threading.current_thread().name}\': Iteration #{self.counter}')
+        
         if self.counter % 200 == 0:
+            print(f'Worker \'{threading.current_thread().name}\': Iteration #{self.counter}')
             self.cursor.request_commit()
     
     def test_async_function(self, pid):

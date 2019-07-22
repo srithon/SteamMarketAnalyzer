@@ -50,7 +50,7 @@ class ProxyList:
         
         # self.proxies.clear()
 
-        for _ in range(pages_per_refresh):
+        for _ in range(ProxyList.pages_per_refresh):
             while current_page < self.proxy_page:
                 next_button = driver.find_element_by_css_selector('#proxylisttable_next > a:nth-child(1)')
                 sleep(0.5)

@@ -8,7 +8,7 @@ import asyncio
 class Controller:
     def __init__(self, db_cursor, num_workers):
         self.db_cursor = db_cursor
-        db_cursor.execute('SELECT name FROM tf2_item_names ORDER BY name DESC')
+        db_cursor.execute('SELECT DISTINCT name FROM tf2')
         item_list = [item[0] for item in db_cursor.fetchall()]
         print(not not item_list)
         db_cursor_wrapper = CursorWrapper(db_cursor)
@@ -62,6 +62,8 @@ class Controller:
             except KeyboardInterrupt:
                 self.shutdown()
                 sys.exit()
+        
+        self.shutdown()
 
 
 class CursorWrapper:
