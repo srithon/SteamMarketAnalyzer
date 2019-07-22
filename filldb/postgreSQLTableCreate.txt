@@ -5,6 +5,21 @@ CREATE TABLE tf2 (
 	volume	INTEGER		NULL
 );
 
+SELECT create_hypertable('tf2', 'time');
+
 CREATE TABLE tf2_item_names (
+	name	VARCHAR(110)	NOT NULL
+);
+
+CREATE TABLE csgo (
+	time	TIMESTAMPTZ	NOT NULL,
+	name	VARCHAR(110)	NOT NULL,
+	price	INTEGER		NULL,
+	volume	INTEGER		NULL
+);
+
+SELECT create_hypertable('csgo', 'time');
+
+CREATE TABLE csgo_item_names (
 	name	VARCHAR(110)	NOT NULL
 );

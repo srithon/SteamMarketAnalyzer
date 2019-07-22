@@ -13,8 +13,8 @@ from ProxyList import ProxyList
 
 import sys
 
-appid = input('AppID: ')
-table_name = input('Table Name: ')
+appid = input('AppID: ') # CS:GO 730 TF2 440
+table_name = input('Table Name: ') #tf2_item_names csgo_item_names
 
 response = input(f'Are these the desired outputs? (Y/N)\nAppID: {appid}\nTable Name: {table_name}\n')
 
