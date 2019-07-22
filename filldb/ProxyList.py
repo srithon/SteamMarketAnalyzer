@@ -68,11 +68,11 @@ class ProxyList:
                     
                     self.proxy_page = 0
                     
-                    return
+                    return self.refresh_proxies()
 
                 current_page += 1
 
-            self.proxy_page += 1
+            self.proxy_page += ProxyList.pages_per_refresh
             
             proxies_body = driver.find_element_by_css_selector('#proxylisttable > tbody:nth-child(2)')
             proxies = proxies_body.find_elements_by_xpath('.//tr')
