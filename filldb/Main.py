@@ -1,6 +1,7 @@
 from Controller import Controller
 import asyncio
 import psycopg2
+import sys
 
 with open('../password.txt', 'r') as password_file:
     connection = psycopg2.connect(host='localhost',

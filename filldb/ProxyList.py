@@ -97,7 +97,10 @@ class ProxyList:
 
     def synchronized_get_new_proxy_dict(self):
         with self.lock:
-            return self.get_proxy_dict(self.get_new_proxy())
+            return self.get_new_proxy_dict()
+    
+    def get_new_proxy_dict(self):
+        return self.get_proxy_dict(self.get_new_proxy())
 
     def get_proxy_dict(self, current_proxy):
         return { "https" : str(current_proxy) }
