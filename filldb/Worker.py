@@ -65,8 +65,9 @@ class Worker:
         
         self.counter += 1
         
+        print(f'Worker \'{threading.current_thread().name}\': Iteration #{self.counter}')
+        
         if self.counter % 200 == 0:
-            print(f'Worker \'{threading.current_thread().name}\': Iteration #{self.counter}')
             self.cursor.request_commit()
     
     def test_async_function(self, pid):

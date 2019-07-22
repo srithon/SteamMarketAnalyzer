@@ -24,6 +24,8 @@ class ProxyList:
         options = webdriver.FirefoxOptions()
         options.add_argument('--headless')
         
+        print('Entered refresh_proxies')
+        
         while True:
             try:
                 driver = webdriver.Firefox(firefox_options=options)
@@ -88,6 +90,7 @@ class ProxyList:
                 self.proxies.append('{}:{}'.format(ip, port))
 
         os.system('taskkill /f /im geckodriver.exe /T')
+        print('Exited refresh_proxies')
         
     def get_new_proxy(self):
         print('{} proxies remaining'.format(len(self.proxies)))
