@@ -10,7 +10,7 @@ class Controller:
         self.db_cursor = db_cursor
         db_cursor.execute(f'SELECT DISTINCT name FROM {input_table} ORDER by name DESC')
         item_list = [item[0] for item in db_cursor.fetchall()]
-        print(not not item_list)
+        print(len(item_list))
         db_cursor_wrapper = CursorWrapper(db_cursor)
         self.num_workers = num_workers
         self.proxy_list = ProxyList()
@@ -18,6 +18,7 @@ class Controller:
         self.workers = list()
         self.last_commit = time()
         item_sublists = self.n_sub_lists(num_workers, item_list)
+        print([len(list) for list in item_sublists])
         for i in range(num_workers):
             self.workers.append(Worker(db_cursor_wrapper, self.proxy_list, item_sublists[i], appid, output_table))
     
@@ -76,8 +77,8 @@ class CursorWrapper:
     def request_commit(self):
         with self.lock:
             self.commit_requests += 1
-            # last commit was over 5 minutes ago and more than one request
-            if time() - self.last_commit > 300 and self.commit_requests > 1:
+            # last commit was over 1 minutes ago and more than one request
+            if time() - self.last_commit > 60 and self.commit_requests > 1:
                 self.db_cursor.connection.commit()
                 self.commit_requests = 0
                 self.last_commit = time()

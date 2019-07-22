@@ -15,6 +15,7 @@ class Worker:
         self.item_list = item_list
         self.http_session = requests.Session()
         self.counter = 0
+        self.give_up_count = 0
         self.appid = appid
         self.output_table_name = output_table_name
         for _ in range(Worker.proxies_per_worker):
@@ -47,7 +48,8 @@ class Worker:
             try:
                 lowest_price = response['median_price'][1:]
             except:
-                # print(f'Gave up on {item}')
+                print(f'Worker \'{threading.current_thread().name}\': Gave up on {item}. #{self.give_up_count}')
+                self.give_up_count += 1
                 return
 
         try:
@@ -80,6 +82,7 @@ class Worker:
 
     async def process_items(self):
         await asyncio.gather(*[self.internal_process_items(index) for index in range(Worker.proxies_per_worker)])
+        self.cursor.request_commit()
     
     def start_worker(self, event_loop):
         try:

@@ -10,7 +10,7 @@ import sys
 import threading
 
 class ProxyList:
-    initial_url = 'https://free-proxy-list.net/anonymous-proxy.html'
+    initial_url = 'https://free-proxy-list.net/uk-proxy.html'
     pages_per_refresh = 2
 
     def __init__(self):
@@ -74,7 +74,7 @@ class ProxyList:
 
                 current_page += 1
 
-            self.proxy_page += ProxyList.pages_per_refresh
+            self.proxy_page += 1
             
             proxies_body = driver.find_element_by_css_selector('#proxylisttable > tbody:nth-child(2)')
             proxies = proxies_body.find_elements_by_xpath('.//tr')
