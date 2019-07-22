@@ -6,9 +6,9 @@ from time import time
 import asyncio
 
 class Controller:
-    def __init__(self, db_cursor, num_workers):
+    def __init__(self, db_cursor, num_workers, appid, output_table, input_table):
         self.db_cursor = db_cursor
-        db_cursor.execute('SELECT DISTINCT name FROM tf2')
+        db_cursor.execute(f'SELECT DISTINCT name FROM {input_table}')
         item_list = [item[0] for item in db_cursor.fetchall()]
         print(not not item_list)
         db_cursor_wrapper = CursorWrapper(db_cursor)
@@ -19,7 +19,7 @@ class Controller:
         self.last_commit = time()
         item_sublists = self.n_sub_lists(num_workers, item_list)
         for i in range(num_workers):
-            self.workers.append(Worker(db_cursor_wrapper, self.proxy_list, item_sublists[i]))
+            self.workers.append(Worker(db_cursor_wrapper, self.proxy_list, item_sublists[i], appid, output_table))
     
     def n_sub_lists(self, n, list_to_split):
         av_size = len(list_to_split) // n

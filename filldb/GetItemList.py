@@ -31,6 +31,7 @@ with open('../password.txt', 'r') as password_file:
 cursor = connection.cursor()
 
 ProxyList.pages_per_refresh = 1
+ProxyList.initial_url = 'https://us-proxy.org'
 proxies = ProxyList()
 
 def main():

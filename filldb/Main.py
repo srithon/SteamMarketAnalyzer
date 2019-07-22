@@ -3,6 +3,15 @@ import asyncio
 import psycopg2
 import sys
 
+appid = input('AppID: ') # CS:GO 730 TF2 440
+output_table_name = input('Output Table Name: ') #tf2_item_names csgo_item_names
+input_table_name = input('Input Table Name: ')
+
+response = input(f'\nAre these the desired outputs? (Y/N)\nAppID: {appid}\nOutput Table Name: {output_table_name}\nInput Table Name: {input_table_name}\n')
+
+if response is not 'Y':
+    sys.exit()
+
 with open('../password.txt', 'r') as password_file:
     connection = psycopg2.connect(host='localhost',
                                  dbname='steammarket',
@@ -11,7 +20,7 @@ with open('../password.txt', 'r') as password_file:
                                  port=7538)
 
 def main():
-    controller = Controller(connection.cursor(), 3)
+    controller = Controller(connection.cursor(), 3, appid, output_table_name, input_table_name)
     try:
         controller.start_workers()
     except KeyboardInterrupt:

@@ -8,13 +8,15 @@ class Worker:
     proxies_per_worker = 3
     delay = 1.5
 
-    def __init__(self, cursor_wrapper, proxies, item_list):
+    def __init__(self, cursor_wrapper, proxies, item_list, appid, output_table_name):
         self.cursor = cursor_wrapper
         self.proxies = proxies
         self.reserved_proxies = list()
         self.item_list = item_list
         self.http_session = requests.Session()
         self.counter = 0
+        self.appid = appid
+        self.output_table_name = output_table_name
         for _ in range(Worker.proxies_per_worker):
             self.reserved_proxies.append(self.new_proxy())
     
@@ -32,7 +34,7 @@ class Worker:
 
         while True:
             try:
-                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid=440&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
+                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
                 await asyncio.sleep(0)
                 break
             except Exception as e:
@@ -58,7 +60,7 @@ class Worker:
         except:
             volume = 0
         
-        query = 'INSERT INTO tf2(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
+        query = f'INSERT INTO {self.output_table_name}(time, name, price, volume) VALUES (NOW(), %s, %s, %s)'
         self.cursor.execute(query, (item, price, volume))
         
         self.counter += 1
