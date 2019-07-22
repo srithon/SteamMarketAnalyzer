@@ -62,7 +62,7 @@ def main():
             try:
                 for i in r['results']:
                     try:
-                        cursor.execute(f'INSERT INTO table_name(name) VALUES (%s)', (i['name'],))
+                        cursor.execute(f'INSERT INTO {table_name}(name) VALUES (%s)', (i['name'],))
                     except Exception as e:
                         print(e)
                 success = True
