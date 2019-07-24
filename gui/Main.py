@@ -1,4 +1,6 @@
 import tkinter as tk
+from filldb import Main
+import threading
 
 class Application(tk.Frame):
     def __init__(self, master):
@@ -29,9 +31,13 @@ class AnalysisFrame(tk.Frame):
     def populate(self):
         self.start_button = tk.Button(self, text='Start', command=self.start_analysis)
         self.start_button.grid(padx=50, pady=50)
+
+        self.table_name_field = HintTextEntry(self, 'Table Name')#, grid_args={'padx':50,'pady':20})
+        self.table_name_field.place(rely=0.15, relheight=0.20, relwidth=1.0)
     
     def start_analysis(self):
         print('Start analysis....')
+        print(self.table_name_field)
     
 
 class FillDBFrame(tk.Frame):
@@ -42,8 +48,8 @@ class FillDBFrame(tk.Frame):
         # num_workers, appid, output_table_name, input_table_name
 
     def populate(self):
-        self.start_button = tk.Button(self, text='Start', command=self.start_filling_db)
-        self.start_button.grid(padx=50, pady=10)
+        self.start_stop_button = tk.Button(self, text='Start', command=self.start_filling_db)
+        self.start_stop_button.grid(padx=50, pady=10)
 
         self.num_workers_field = HintTextEntry(self, 'Number of Workers')#, grid_args={'padx':50,'pady':20})
         self.num_workers_field.place(rely=0.15, relheight=0.20, relwidth=1.0)
@@ -55,11 +61,18 @@ class FillDBFrame(tk.Frame):
         self.input_table_name_field.place(rely=0.80, relheight=0.20, relwidth=1.0)
     
     def start_filling_db(self):
+        self.start_stop_button.configure(text='Stop', command=self.stop_filling_db)
         print('Start filldb?')
-        print(self.num_workers_field.get_full())
-        print(self.appid_field.get_full())
-        print(self.output_table_name_field.get_full())
-        print(self.input_table_name_field.get_full())
+        if all(self.num_workers_field.get_full(), self.appid_field.get_full(), self.output_table_name_field.get_full(), self.input_table_name_field.get_full()):
+            self.main_controller_thread = threading.Thread(name='Main FillDB Controller Thread' target=self.start_filling_db_internal)
+    
+    def start_filling_db_internal(self):
+        self.main_instance = Main(int(self.num_workers_field.get_full()), int(self.appid_field.get_full()), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())
+        self.main_instance.start()
+    
+    def stop_filling_db(self):
+        self.main_instance.stop()
+
 
 class HintTextEntry(tk.Text):
     def __init__(self, master, hint_text, grid_args=None):
@@ -68,6 +81,7 @@ class HintTextEntry(tk.Text):
         self.insert(1.0, hint_text)
         self.bind('<FocusIn>', self.handle_enter)
         self.bind('<FocusOut>', self.handle_leave)
+        self.bind('<Tab>', self.focus_next)
 
         if grid_args is not None:
             self.grid(**grid_args)
@@ -84,6 +98,10 @@ class HintTextEntry(tk.Text):
     
     def get_full(self):
         return self.get(1.0, 'end').rstrip()
+
+    def focus_next(self, event):
+        event.widget.tk_focusNext().focus()
+        return 'break'
 
 class MainFrame(tk.Frame):
     def __init__(self, master):
