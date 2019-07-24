@@ -13,8 +13,8 @@ from ProxyList import ProxyList
 
 import sys
 
-appid = input('AppID: ') # CS:GO 730 TF2 440
-table_name = input('Table Name: ') #tf2_item_names csgo_item_names
+appid = input('AppID: ') # CS:GO 730 TF2 440 DOTA2 570
+table_name = input('Table Name: ') #tf2_item_names csgo_item_names dota2_item_names
 
 response = input(f'Are these the desired outputs? (Y/N)\nAppID: {appid}\nTable Name: {table_name}\n')
 
@@ -30,8 +30,7 @@ with open('../password.txt', 'r') as password_file:
 
 cursor = connection.cursor()
 
-ProxyList.pages_per_refresh = 1
-ProxyList.initial_url = 'https://us-proxy.org'
+ProxyList.pages_per_refresh = 2
 proxies = ProxyList()
 
 def main():
@@ -43,12 +42,12 @@ def main():
         sys.exit()
     proxy_dict = proxies.get_new_proxy_dict()
  
-    while start < 24000:
+    while start < 32000:
         success = False
 
         while not success:
             try:
-                r = s.get(f'https://steamcommunity.com/market/search/render/?query=&start={start}&count=100&norender=1&search_descriptions=0&sort_column=quantity&sort_dir=desc&appid={appid}&category_{appid}_ItemSet[]=any&', proxies = proxy_dict).json()
+                r = s.get(f'https://steamcommunity.com/market/search/render/?query=&start={start}&count=100&norender=1&search_descriptions=0&sort_column=quantity&sort_dir=desc&appid={appid}&category_{appid}_ItemSet[]=any&', timeout=2.0, proxies=proxy_dict).json()
                 success = True
             except KeyboardInterrupt:
                 s.close()
