@@ -12,18 +12,17 @@ response = input(f'\nAre these the desired outputs? (Y/N)\nAppID: {appid}\nOutpu
 if response is not 'Y':
     sys.exit()
 
-with open('../password.txt', 'r') as password_file:
-    connection = psycopg2.connect(host='localhost',
-                                 dbname='steammarket',
-                                 user='postgres',
-                                 password=password_file.read().rstrip(),
-                                 port=7538)
-
-def main():
-    controller = Controller(connection.cursor(), 3, appid, output_table_name, input_table_name)
+def main(num_workers, appid, output_table_name, input_table_name):
+    with open('../password.txt', 'r') as password_file:
+        connection = psycopg2.connect(host='localhost',
+                                    dbname='steammarket',
+                                    user='postgres',
+                                    password=password_file.read().rstrip(),
+                                    port=7538)
+    controller = Controller(connection.cursor(), num_workers, appid, output_table_name, input_table_name)
     try:
         controller.start_workers()
     except KeyboardInterrupt:
         controller.shutdown()
 
-main()
+main(3, appid, output_table_name, input_table_name)
