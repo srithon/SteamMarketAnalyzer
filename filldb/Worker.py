@@ -7,6 +7,7 @@ import threading
 class Worker:
     proxies_per_worker = 3
     delay = 1.5
+    request_timeout = 0.50
 
     def __init__(self, cursor_wrapper, proxies, item_list, appid, output_table_name):
         self.cursor = cursor_wrapper
@@ -35,7 +36,7 @@ class Worker:
 
         while True:
             try:
-                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', proxies = self.reserved_proxies[pid]).json()
+                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', timeout=Worker.request_timeout, proxies=self.reserved_proxies[pid]).json()
                 await asyncio.sleep(0)
                 break
             except Exception as e:
