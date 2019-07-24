@@ -2,7 +2,7 @@ import tkinter as tk
 import threading
 import sys
 
-sys.path.append(r'..\filldb')
+sys.path.append(r'filldb')
 from FillDBInterface import FillDBInterface
 
 
