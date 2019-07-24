@@ -42,19 +42,10 @@ class Controller:
     def start_workers(self):
         # await asyncio.gather(*[worker.process_items(index) for index, worker in enumerate(self.workers)])
         # this should run each worker on a different process
-        for i in range(len(self.workers) - 1):
+        for i in range(len(self.workers)):
             event_loop = asyncio.new_event_loop()
             self.worker_threads.append(threading.Thread(target=self.workers[i].start_worker, args=(event_loop,)))
             self.worker_threads[-1].start()
-        event_loop = asyncio.get_event_loop()
-
-        try:
-            event_loop.run_until_complete(self.workers[-1].process_items())
-        except KeyboardInterrupt:
-            self.shutdown()
-            sys.exit()
-        finally:
-            event_loop.close()
             
         for t in self.worker_threads:
             print('Joining thread')
