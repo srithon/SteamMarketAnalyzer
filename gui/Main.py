@@ -3,6 +3,7 @@ import tkinter as tk
 class Application(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master)
+        master.title('SteamMarketAnalyzer')
         self.pack(side="top", fill="both", expand=True)
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
@@ -41,41 +42,48 @@ class FillDBFrame(tk.Frame):
         # num_workers, appid, output_table_name, input_table_name
 
     def populate(self):
-        self.start_button = tk.Button(self, text='Start', command=self.start_analysis)
-        self.start_button.grid(padx=50, pady=50)
+        self.start_button = tk.Button(self, text='Start', command=self.start_filling_db)
+        self.start_button.grid(padx=50, pady=10)
 
-        self.num_workers_field = HintTextEntry(self, 'Number of Workers', grid_args={'padx':50,'pady':20})
-        self.appid_field = HintTextEntry(self, 'App ID', grid_args={'padx':50,'pady':20})
-        self.output_table_name_field = HintTextEntry(self, 'Output Table', grid_args={'padx':50,'pady':20})
+        self.num_workers_field = HintTextEntry(self, 'Number of Workers')#, grid_args={'padx':50,'pady':20})
+        self.num_workers_field.place(rely=0.15, relheight=0.20, relwidth=1.0)
+        self.appid_field = HintTextEntry(self, 'App ID')#, grid_args={'padx':50,'pady':20})
+        self.appid_field.place(rely=0.35, relheight=0.20, relwidth=1.0)
+        self.output_table_name_field = HintTextEntry(self, 'Output Table')#, grid_args={'padx':50,'pady':20})
+        self.output_table_name_field.place(rely=0.60, relheight=0.20, relwidth=1.0)
         self.input_table_name_field = HintTextEntry(self, 'Input Table', grid_args={'padx':50,'pady':20})
+        self.input_table_name_field.place(rely=0.80, relheight=0.20, relwidth=1.0)
     
-    def start_analysis(self):
+    def start_filling_db(self):
         print('Start filldb?')
-        print(self.num_workers_field.get(0))
-        print(self.appid_field.get(0))
-        print(self.output_table_name_field.get(0))
-        print(self.input_table_name_field.get(0))
+        print(self.num_workers_field.get_full())
+        print(self.appid_field.get_full())
+        print(self.output_table_name_field.get_full())
+        print(self.input_table_name_field.get_full())
 
 class HintTextEntry(tk.Text):
     def __init__(self, master, hint_text, grid_args=None):
         tk.Text.__init__(self, master)
         self.hint_text = hint_text
-        self.insert('1.0', hint_text)
-        self.bind('<Enter>', self.handle_enter)
-        self.bind('<Leave>', self.handle_leave)
+        self.insert(1.0, hint_text)
+        self.bind('<FocusIn>', self.handle_enter)
+        self.bind('<FocusOut>', self.handle_leave)
 
         if grid_args is not None:
             self.grid(**grid_args)
     
     def handle_enter(self, event):
-        print(self.get(1.0,'end'))
-        print(self.hint_text)
-        if self.get(1.0,'end').rstrip() == self.hint_text:
+        # print(self.get(1.0,'end'))
+        # print(self.hint_text)
+        if self.get_full() == self.hint_text:
             self.delete(1.0, 'end')
 
     def handle_leave(self, event):
-        if not self.get(1.0, 'end').rstrip():
+        if not self.get_full().rstrip():
             self.insert(1.0, self.hint_text)
+    
+    def get_full(self):
+        return self.get(1.0, 'end').rstrip()
 
 class MainFrame(tk.Frame):
     def __init__(self, master):
