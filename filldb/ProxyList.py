@@ -10,7 +10,7 @@ import sys
 import threading
 
 class ProxyList:
-    initial_url = 'https://free-proxy-list.net/uk-proxy.html'
+    initial_url = 'https://free-proxy-list.net/anonymous-proxy.html'
     pages_per_refresh = 2
 
     def __init__(self):
@@ -19,6 +19,10 @@ class ProxyList:
         self.proxies = list()
         self.refresh_proxies()
         self.lock = threading.Lock()
+        self.shutdown = False
+
+    def shutdown(self):
+        self.shutdown = True
     
     def refresh_proxies(self):
         options = webdriver.FirefoxOptions()
@@ -99,8 +103,14 @@ class ProxyList:
         return self.proxies.pop(int(random() * len(self.proxies)))
 
     def synchronized_get_new_proxy_dict(self):
+        print(f'Proxy request from Worker \'{threading.current_thread().name}\'')
+        if self.shutdown:
+            raise SystemExit()
         with self.lock:
-            return self.get_new_proxy_dict()
+            try:
+                return self.get_new_proxy_dict()
+            finally:
+                print(f'Proxy request returned from Worker \'{threading.current_thread().name}\'')
     
     def get_new_proxy_dict(self):
         return self.get_proxy_dict(self.get_new_proxy())

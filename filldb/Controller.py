@@ -42,6 +42,7 @@ class Controller:
         for worker in self.workers:
             worker.item_list.clear()
         self.display_stats()
+        self.proxy_list.shutdown()
     
     def start_workers(self):
         # await asyncio.gather(*[worker.process_items(index) for index, worker in enumerate(self.workers)])
