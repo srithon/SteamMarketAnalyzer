@@ -15,8 +15,9 @@ import sys
 
 appid = input('AppID: ') # CS:GO 730 TF2 440 DOTA2 570
 table_name = input('Table Name: ') #tf2_item_names csgo_item_names dota2_item_names
+item_threshold = input('Item Threshold: ')
 
-response = input(f'Are these the desired outputs? (Y/N)\nAppID: {appid}\nTable Name: {table_name}\n')
+response = input(f'Are these the desired outputs? (Y/N)\nAppID: {appid}\nTable Name: {table_name}\nItem Threshold: {item_threshold}\n')
 
 if response is not 'Y':
     sys.exit()
@@ -34,7 +35,7 @@ ProxyList.pages_per_refresh = 2
 proxies = ProxyList()
 
 def main():
-    global proxies, appid, table_name
+    global proxies, appid, table_name, item_threshold
     s = requests.Session()
     start = 0
     
@@ -42,7 +43,7 @@ def main():
         sys.exit()
     proxy_dict = proxies.get_new_proxy_dict()
  
-    while start < 32000:
+    while start < item_threshold:
         success = False
 
         while not success:
