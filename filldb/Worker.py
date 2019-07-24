@@ -29,7 +29,7 @@ class Worker:
             return
         try:
             item = self.item_list.pop(0)
-        except Exception as e:
+        except Exception:
             pass
             # print(f'Error in process_item->item_list.pop(): {e}')
 

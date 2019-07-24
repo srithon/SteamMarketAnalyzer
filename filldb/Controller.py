@@ -36,7 +36,7 @@ class Controller:
         print('Total: {}'.format(sum([worker.counter for worker in self.workers])))
     
     def shutdown(self):    
-        print('Keyboard interrupt; shutting down')
+        print('Shutting down controller...')
         self.db_cursor.connection.commit()
         self.db_cursor.connection.close()
         for worker in self.workers:
