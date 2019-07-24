@@ -24,7 +24,11 @@ class Controller:
     
     def n_sub_lists(self, n, list_to_split):
         av_size = len(list_to_split) // n
-        return [list_to_split[i:i+av_size] for i in range(0, len(list_to_split), av_size)]
+        sub_lists = list()
+        for i in range(0, n - 1):
+            sub_lists.append(list_to_split[ i*av_size : (i+1)*av_size ])
+        sub_lists.append(list_to_split[(n-1)*av_size:])
+        return sub_lists
     
     def display_stats(self):
         for index, worker in enumerate(self.workers):
