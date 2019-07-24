@@ -85,7 +85,8 @@ class Worker:
         self.cursor.request_commit()
     
     def start_worker(self):
-        event_loop = asyncio.get_event_loop()
+        event_loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(event_loop)
         try:
             event_loop.run_until_complete(self.process_items())
         finally:

@@ -1,6 +1,10 @@
 import tkinter as tk
-from filldb import Main
 import threading
+import sys
+
+sys.path.append(r'..\filldb')
+from FillDBInterface import FillDBInterface
+
 
 class Application(tk.Frame):
     def __init__(self, master):
@@ -63,11 +67,12 @@ class FillDBFrame(tk.Frame):
     def start_filling_db(self):
         self.start_stop_button.configure(text='Stop', command=self.stop_filling_db)
         print('Start filldb?')
-        if all(self.num_workers_field.get_full(), self.appid_field.get_full(), self.output_table_name_field.get_full(), self.input_table_name_field.get_full()):
-            self.main_controller_thread = threading.Thread(name='Main FillDB Controller Thread' target=self.start_filling_db_internal)
+        if all(x for x in (self.num_workers_field.get_full(), self.appid_field.get_full(), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())):
+            self.main_controller_thread = threading.Thread(name='Main FillDB Controller Thread', target=self.start_filling_db_internal)
+            self.main_controller_thread.start()
     
     def start_filling_db_internal(self):
-        self.main_instance = Main(int(self.num_workers_field.get_full()), int(self.appid_field.get_full()), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())
+        self.main_instance = FillDBInterface(int(self.num_workers_field.get_full()), int(self.appid_field.get_full()), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())
         self.main_instance.start()
     
     def stop_filling_db(self):
