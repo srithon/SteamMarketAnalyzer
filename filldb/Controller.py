@@ -43,8 +43,7 @@ class Controller:
         # await asyncio.gather(*[worker.process_items(index) for index, worker in enumerate(self.workers)])
         # this should run each worker on a different process
         for i in range(len(self.workers)):
-            event_loop = asyncio.new_event_loop()
-            self.worker_threads.append(threading.Thread(target=self.workers[i].start_worker, args=(event_loop,)))
+            self.worker_threads.append(threading.Thread(target=self.workers[i].start_worker)
             self.worker_threads[-1].start()
             
         for t in self.worker_threads:

@@ -84,7 +84,8 @@ class Worker:
         await asyncio.gather(*[self.internal_process_items(index) for index in range(Worker.proxies_per_worker)])
         self.cursor.request_commit()
     
-    def start_worker(self, event_loop):
+    def start_worker(self):
+        event_loop = asyncio.get_event_loop()
         try:
             event_loop.run_until_complete(self.process_items())
         finally:
