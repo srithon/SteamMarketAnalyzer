@@ -7,7 +7,8 @@ import threading
 class Worker:
     proxies_per_worker = 3
     delay = 1.5
-    request_timeout = 0.50
+    request_timeout = delay
+    verbose = False
 
     def __init__(self, cursor_wrapper, proxies, item_list, appid, output_table_name):
         self.cursor = cursor_wrapper
@@ -31,17 +32,23 @@ class Worker:
         try:
             item = self.item_list.pop(0)
         except Exception:
-            pass
+            return
             # print(f'Error in process_item->item_list.pop(): {e}')
 
         while True:
             try:
                 response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', timeout=Worker.request_timeout, proxies=self.reserved_proxies[pid]).json()
-                await asyncio.sleep(0)
                 break
             except Exception as e:
                 # print(f'{pid}: {e}')
                 self.reserved_proxies[pid] = self.new_proxy()
+                await asyncio.sleep(0)
+
+        if Worker.verbose:
+            print()
+            print(response)
+            print(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}')
+            print()
 
         try:
             lowest_price = response['lowest_price'][1:]

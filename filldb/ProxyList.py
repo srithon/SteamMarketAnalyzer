@@ -20,9 +20,6 @@ class ProxyList:
         self.refresh_proxies()
         self.lock = threading.Lock()
         self.shutdown = False
-
-    def shutdown(self):
-        self.shutdown = True
     
     def refresh_proxies(self):
         options = webdriver.FirefoxOptions()

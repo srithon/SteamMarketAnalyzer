@@ -21,6 +21,9 @@ class FillDBInterface:
 
     def stop(self):
         self.controller.shutdown()
+    
+    def toggle_verbose(self):
+        return self.controller.toggle_verbose()
 
 if __name__ == '__main__':
     appid = input('AppID: ') # CS:GO 730 TF2 440

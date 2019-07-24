@@ -49,20 +49,32 @@ class FillDBFrame(tk.Frame):
         tk.Frame.__init__(self, master)
         self.populate()
         self.grid(column=0, row=0, sticky='nsew')
+        self.main_instance = None
         # num_workers, appid, output_table_name, input_table_name
 
     def populate(self):
         self.start_stop_button = tk.Button(self, text='Start', command=self.start_filling_db)
         self.start_stop_button.grid(padx=50, pady=10)
+        
+        self.verbose_on_off_button = tk.Button(self, text='Verbose Off', command=self.toggle_verbose)
+        self.verbose_on_off_button.grid(padx=50, pady=0)
 
         self.num_workers_field = HintTextEntry(self, 'Number of Workers')#, grid_args={'padx':50,'pady':20})
-        self.num_workers_field.place(rely=0.15, relheight=0.20, relwidth=1.0)
+        self.num_workers_field.place(rely=0.25, relheight=0.15, relwidth=1.0)
         self.appid_field = HintTextEntry(self, 'App ID')#, grid_args={'padx':50,'pady':20})
-        self.appid_field.place(rely=0.35, relheight=0.20, relwidth=1.0)
+        self.appid_field.place(rely=0.40, relheight=0.15, relwidth=1.0)
         self.output_table_name_field = HintTextEntry(self, 'Output Table')#, grid_args={'padx':50,'pady':20})
-        self.output_table_name_field.place(rely=0.60, relheight=0.20, relwidth=1.0)
+        self.output_table_name_field.place(rely=0.60, relheight=0.15, relwidth=1.0)
         self.input_table_name_field = HintTextEntry(self, 'Input Table', grid_args={'padx':50,'pady':20})
-        self.input_table_name_field.place(rely=0.80, relheight=0.20, relwidth=1.0)
+        self.input_table_name_field.place(rely=0.75, relheight=0.15, relwidth=1.0)
+        
+    def toggle_verbose(self):
+        if self.main_instance:
+            if self.main_instance.toggle_verbose():
+                self.verbose_on_off_button.configure(text='Verbose Off')
+            else:
+                self.verbose_on_off_button.configure(text='Verbose On')
+        
     
     def start_filling_db(self):
         self.start_stop_button.configure(text='Stop', command=self.stop_filling_db)

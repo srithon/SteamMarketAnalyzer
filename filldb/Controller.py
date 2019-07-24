@@ -37,12 +37,21 @@ class Controller:
     
     def shutdown(self):    
         print('Shutting down controller...')
-        self.db_cursor.connection.commit()
-        self.db_cursor.connection.close()
+        try:
+            self.db_cursor.connection.commit()
+            self.db_cursor.connection.close()
+        except Exception as e:
+            print(e)
+
         for worker in self.workers:
             worker.item_list.clear()
+
         self.display_stats()
-        self.proxy_list.shutdown()
+        self.proxy_list.shutdown = True
+    
+    def toggle_verbose(self):
+        Worker.verbose = not Worker.verbose
+        return not Worker.verbose
     
     def start_workers(self):
         # await asyncio.gather(*[worker.process_items(index) for index, worker in enumerate(self.workers)])
