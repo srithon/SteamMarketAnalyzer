@@ -38,6 +38,7 @@ class Worker:
         while True:
             try:
                 response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', timeout=Worker.request_timeout, proxies=self.reserved_proxies[pid]).json()
+                success = response['success']
                 break
             except Exception as e:
                 # print(f'{pid}: {e}')
@@ -49,6 +50,9 @@ class Worker:
             print(response)
             print(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}')
             print()
+
+        if not success:
+            return
 
         try:
             lowest_price = response['lowest_price'][1:]
