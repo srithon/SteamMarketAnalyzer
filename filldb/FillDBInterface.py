@@ -5,7 +5,7 @@ import sys
 
 class FillDBInterface:
     def __init__(self, num_workers, appid, output_table_name, input_table_name):
-        with open('../password.txt', 'r') as password_file:
+        with open('password.txt', 'r') as password_file:
             connection = psycopg2.connect(host='localhost',
                                         dbname='steammarket',
                                         user='postgres',
