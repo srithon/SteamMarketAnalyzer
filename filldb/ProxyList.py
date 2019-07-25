@@ -15,7 +15,7 @@ class ProxyList:
 
     def __init__(self):
         self.url = ProxyList.initial_url
-        self.proxy_page = 0
+        self.proxy_page = 1
         self.proxies = list()
         self.refresh_proxies()
         self.lock = threading.Lock()
@@ -55,12 +55,14 @@ class ProxyList:
 
         for _ in range(ProxyList.pages_per_refresh):
             while current_page < self.proxy_page:
-                next_button = driver.find_element_by_css_selector('#proxylisttable_next > a:nth-child(1)')
+                next_button_container = driver.find_element_by_css_selector('#proxylisttable_next')
+                next_button = next_button_container.find_element_by_css_selector('a:nth-child(1)')
                 sleep(0.5)
                 driver.execute_script('"window.scrollTo(0, document.body.scrollHeight);"')
-                try:
+
+                if not 'disabled' in next_button_container.get_attribute('class'):
                     next_button.click()
-                except:
+                else:
                     print(f'Changing proxy sites. Currently: {self.url}')
                     if self.url == 'https://us-proxy.org':
                         self.url = 'https://free-proxy-list.net/uk-proxy.html'
@@ -69,13 +71,11 @@ class ProxyList:
                     else:
                         self.url = 'https://us-proxy.org'
                     
-                    self.proxy_page = 0
+                    self.proxy_page = 1
                     
                     return self.refresh_proxies()
 
                 current_page += 1
-
-            self.proxy_page += 1
             
             proxies_body = driver.find_element_by_css_selector('#proxylisttable > tbody:nth-child(2)')
             proxies = proxies_body.find_elements_by_xpath('.//tr')
@@ -89,6 +89,8 @@ class ProxyList:
                 port = proxy_element.find_element_by_xpath('.//td[2]').text
                 print('{}:{}'.format(ip, port))
                 self.proxies.append('{}:{}'.format(ip, port))
+            
+            self.proxy_page += 1
 
         os.system('taskkill /f /im geckodriver.exe /T')
         print('Exited refresh_proxies')
@@ -114,3 +116,9 @@ class ProxyList:
 
     def get_proxy_dict(self, current_proxy):
         return { "https" : str(current_proxy) }
+
+# Testing ProxyList refresh
+if __name__ == '__main__':
+    p = ProxyList()
+    p.proxy_page = 4
+    p.refresh_proxies()
