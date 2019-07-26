@@ -12,7 +12,7 @@ import threading
 import requests
 
 class ProxyList:
-    initial_url = 'https://proxy.rudnkh.me/txt'#'https://free-proxy-list.net/anonymous-proxy.html'
+    initial_url = 'https://free-proxy-list.net/anonymous-proxy.html'
     pages_per_refresh = 2
 
     def __init__(self):
@@ -129,9 +129,9 @@ class ProxyList:
                 print(f'Proxy request returned from Worker \'{threading.current_thread().name}\'')
     
     def get_new_proxy_dict(self):
-        return self.get_proxy_dict(self.get_new_proxy())
+        return ProxyList.get_proxy_dict(self.get_new_proxy())
 
-    def get_proxy_dict(self, current_proxy):
+    def get_proxy_dict(current_proxy):
         return { "https" : str(current_proxy) }
 
 # Testing ProxyList refresh
