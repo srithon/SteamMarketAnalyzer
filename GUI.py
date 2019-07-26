@@ -1,5 +1,6 @@
 import tkinter as tk
 import threading
+from datetime import datetime
 import sys
 
 sys.path.append(r'filldb')
@@ -77,7 +78,7 @@ class FillDBFrame(tk.Frame):
         
     
     def start_filling_db(self):
-        self.start_stop_button.configure(text='Stop', command=self.stop_filling_db)
+        self.start_stop_button.configure(text=datetime.now().strftime('%m/%d %H:%M:%S'), command=self.stop_filling_db)
         print('Start filldb?')
         if all(x for x in (self.num_workers_field.get_full(), self.appid_field.get_full(), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())):
             self.main_controller_thread = threading.Thread(name='Main FillDB Controller Thread', target=self.start_filling_db_internal)
