@@ -17,6 +17,7 @@ class Controller:
         self.worker_threads = list()
         self.workers = list()
         self.last_commit = time()
+        self.start_time = time()
         item_sublists = self.n_sub_lists(num_workers, item_list)
         print([len(list) for list in item_sublists])
         for i in range(num_workers):
@@ -34,6 +35,7 @@ class Controller:
         for index, worker in enumerate(self.workers):
             print(f'Worker #{index}: {worker.counter}')
         print('Total: {}'.format(sum([worker.counter for worker in self.workers])))
+        print(f'Time Elapsed Since Start: {time() - self.start_time} seconds')
     
     def shutdown(self):    
         print('Shutting down controller...')
