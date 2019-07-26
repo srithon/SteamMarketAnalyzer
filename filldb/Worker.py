@@ -7,7 +7,9 @@ import threading
 class Worker:
     proxies_per_worker = 3
     delay = 1.5
-    request_timeout = delay
+    request_timeout = delay * 2.5
+    request_max_attempts = 5
+    request_attempt_delay = 0.40
     verbose = False
 
     def __init__(self, cursor_wrapper, proxies, item_list, appid, output_table_name):
@@ -35,15 +37,22 @@ class Worker:
             return
             # print(f'Error in process_item->item_list.pop(): {e}')
 
+        fail = True
+
         while True:
-            try:
-                response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', timeout=Worker.request_timeout, proxies=self.reserved_proxies[pid]).json()
-                success = response['success']
-                break
-            except Exception as e:
-                # print(f'{pid}: {e}')
+            for _ in range(Worker.request_max_attempts):
+                try:
+                    response = self.http_session.get(f'https://steamcommunity.com/market/priceoverview/?country=US&currency=1&appid={self.appid}&market_hash_name={item}', timeout=Worker.request_timeout, proxies=self.reserved_proxies[pid]).json()
+                    success = response['success']
+                    fail = False
+                    break
+                except:
+                    await asyncio.sleep(Worker.request_attempt_delay)
+            if fail:
                 self.reserved_proxies[pid] = self.new_proxy()
                 await asyncio.sleep(0)
+            else:
+                break
 
         if Worker.verbose:
             print()
