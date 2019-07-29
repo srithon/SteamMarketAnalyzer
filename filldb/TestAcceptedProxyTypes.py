@@ -1,8 +1,9 @@
 import requests
+from ProxyList import ProxyList
 
 s = requests.Session()
 
-proxy_list = ['104.221.131.27:3128']
+
 
 item_list = [
 'Decal Tool',
@@ -18,7 +19,10 @@ item_list = [
 #'Scream Fortress X War Paint Case #121',
 #'Reinforced Robot Bomb Stabilizer'
 
-for proxy in proxy_list:
+proxy_list_generator = ProxyList()
+proxy_list = proxy_list_generator.proxies
+
+for proxy in [ProxyList.get_proxy_dict(proxy) for proxy in proxy_list]:
     print(f'Proxy: {proxy}')
     for index,item in enumerate(item_list):
         try:

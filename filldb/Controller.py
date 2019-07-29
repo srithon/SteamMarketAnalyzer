@@ -8,7 +8,7 @@ import asyncio
 class Controller:
     def __init__(self, db_cursor, num_workers, appid, output_table, input_table):
         self.db_cursor = db_cursor
-        db_cursor.execute(f'SELECT DISTINCT name FROM {input_table} ORDER by name DESC')
+        db_cursor.execute(f'SELECT DISTINCT name FROM {input_table} WHERE volume > 0 ORDER by name ASC')
         item_list = [item[0] for item in db_cursor.fetchall()]
         print(len(item_list))
         db_cursor_wrapper = CursorWrapper(db_cursor)

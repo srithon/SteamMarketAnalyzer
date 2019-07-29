@@ -97,7 +97,7 @@ class ProxyList:
                 proxies_body = driver.find_element_by_css_selector('#proxylisttable > tbody:nth-child(2)')
                 proxies = proxies_body.find_elements_by_xpath('.//tr')
                 print('{} proxies found in total'.format(len(proxies)))
-                if not proxies:
+                if 'dataTables_empty' in proxies[0].get_attribute('class'):
                     print('No Proxies Found!')
                     sys.exit()
 
