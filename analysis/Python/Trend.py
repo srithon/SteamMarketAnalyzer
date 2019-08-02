@@ -12,12 +12,12 @@ def weightedAverage(numbers):
     current_interval = 1 - interval
     for num in numbers:
         average += current_interval * num
-        print(f'Current Interval: {current_interval}')
-        print(f'Current Average: {average}')
+        # print(f'Current Interval: {current_interval}')
+        # print(f'Current Average: {average}')
         current_interval -= interval
-    print(f'Weighted Average: {average}')
+    # print(f'Weighted Average: {average}')
     average = average / (len(numbers) / 2.0)
-    print(f'New Average: {average}')
+    # print(f'New Average: {average}')
     return average
 
 def percentError(a, b):
@@ -31,7 +31,7 @@ def fluctuation(list):
     return fluctuationDirection(fluc)
 
 def fluctuationDirection(fluc):
-    print(f'Passed in fluctuation: {fluc}')
+    # print(f'Passed in fluctuation: {fluc}')
     if fluc > 15:
         return Direction.UP
     elif fluc < -15:

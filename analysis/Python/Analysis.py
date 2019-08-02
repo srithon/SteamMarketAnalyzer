@@ -8,6 +8,8 @@ def suggested_action(volume, prices):
     if (volume < 8):
         return Action.IGNORE
     else:
+        if prices[0] < 25 or prices[0] > 80:
+            return Action.IGNORE
         direction = fluctuation(prices)
         if direction == None:
             return Action.IGNORE
