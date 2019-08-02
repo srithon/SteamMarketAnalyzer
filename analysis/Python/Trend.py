@@ -24,6 +24,8 @@ def percentError(a, b):
     return ((a - b) / b) * 100
 
 def fluctuationFirstToRest(list):
+    if len(list) == 1:
+        return 0
     return percentError(list[0], weightedAverage(list[1:]))
 
 def fluctuation(list):
