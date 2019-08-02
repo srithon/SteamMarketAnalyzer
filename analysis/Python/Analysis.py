@@ -4,13 +4,13 @@ from enum import Enum
 class Action(Enum):
     BUY, SELL, IGNORE = range(3)
 
-def suggested_action(volume, prices):
+def suggested_action(volume, prices, fluctuation=None):
     if (volume < 8):
         return Action.IGNORE
     else:
         if prices[0] < 25 or prices[0] > 80:
             return Action.IGNORE
-        direction = fluctuation(prices)
+        direction = fluctuationDirection(fluctuation) if fluctuation is not None else fluctuation(prices)
         if direction == None:
             return Action.IGNORE
         elif direction == Direction.UP:
