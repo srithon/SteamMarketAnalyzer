@@ -1,9 +1,15 @@
 import Analysis
 import Trend
 import psycopg2
-from operator import itemgetter
 
 table_name = 'csgo'
+
+
+def absolute_value_of_nth_element_in_tuple_callable(n):
+	def g(tuple):
+		return abs(tuple[n])
+	return g
+
 
 with open('C:/Development/SteamMarketAnalyzer/password.txt', 'r') as password_file:
 	connection = psycopg2.connect(host='localhost',
@@ -35,10 +41,9 @@ for item in item_names:
 	action = Analysis.suggested_action(volume, prices, fluc)
 
 	if action != Analysis.Action.IGNORE:
-		print(f'{item}: {action}')
 		shortlist.append( (item, fluc, prices, volume, action) )
 
-shortlist.sort(key=abs(itemgetter(1)))
+shortlist.sort(key=absolute_value_of_nth_element_in_tuple_callable(1), reverse=True)
 
 [print(f'{row[0]}:{row[-1]}:{row[1]}') for row in shortlist]
 
