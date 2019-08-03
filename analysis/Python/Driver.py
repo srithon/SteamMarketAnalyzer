@@ -43,6 +43,8 @@ for item in item_names:
 
 		if action != Analysis.Action.IGNORE:
 			shortlist.append( (item, fluc, prices, volume, [entry[2] for entry in entries], action) )
+			if len(shortlist) == 2:
+				break
 
 shortlist.sort(key=absolute_value_of_nth_element_in_tuple_callable(1), reverse=True)
 
