@@ -3,6 +3,9 @@ from enum import Enum
 
 from matplotlib import pyplot as plt
 
+price_upper_thresh = 150
+price_lower_thresh = 45
+
 class Action(Enum):
     BUY, SELL, IGNORE = range(3)
 
@@ -16,10 +19,10 @@ def suggested_action(prices, fluctuation=None):
         return Action.BUY
 
 def check_volume(volume):
-    return volume > 8
+    return volume > 6
 
 def check_price(price):
-    return price < 80 and price > 25
+    return price < price_upper_thresh and price > price_lower_thresh
 
 """
 Passed in as
@@ -74,7 +77,10 @@ def plot_items(tuple_list=None):
         nonlocal tuple_list
         row = tuple_list[index]
         plt.gcf().canvas.set_window_title(row[0])
+        # plt.xticks(rotation=45)
+        plt.ylim([0, price_upper_thresh * 1.50])
         plt.plot(row[4], row[2], label=row[0], linewidth=2)
+        plt.gcf().autofmt_xdate()
 
     def plot_before_or_after(event):
         nonlocal current_index
