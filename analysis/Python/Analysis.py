@@ -79,7 +79,7 @@ def plot_items(tuple_list=None):
         plt.gcf().canvas.set_window_title(row[0])
         # plt.xticks(rotation=45)
         plt.ylim([0, price_upper_thresh * 1.50])
-        plt.plot(row[4], row[2], label=row[0], linewidth=2)
+        plt.plot(row[4], row[2], label=row[0], linewidth=2, marker='o')
         plt.gcf().autofmt_xdate()
 
     def plot_before_or_after(event):
