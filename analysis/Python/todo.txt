@@ -1,2 +1,1 @@
 Check if item data is current before checking volume, price
-Put volume data in metric

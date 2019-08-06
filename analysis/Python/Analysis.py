@@ -36,55 +36,36 @@ def plot_items(tuple_list=None):
     plt.style.use('fivethirtyeight')
     # sub_plots = list()
 
-    """
-    def switch_figure_if_left_or_right(event):
-        if event.key == 'right':
-            new_fig = (plt.gcf().number + 1) % len(tuple_list)
-            print(f'New figure: {new_fig}')
-            plt.figure(new_fig)
-        elif event.key == 'left':
-            f = plt.gcf().number - 1
-            if f < 0:
-                f = len(tuple_list) + f
-            print(f'New figure: {f}')
-            plt.figure(f)
-    """
-
-    """
-    def generate_or_get(index, override=False):
-        if index in plt.get_fignums() and not override:
-            plt.figure(index)
-        else:
-            fig = plt.figure(index)
-            row = tuple_list[index]
-            fig.canvas.set_window_title(row[0])
-            plt.plot(row[4], row[2], label=row[0], linewidth=2)
-            plt.ylim([0, 100])
-
-            # plt.xticks(rotation=90)
-
-            fig.autofmt_xdate()
-
-            plt.xlabel('Time Recorded')
-            plt.ylabel('Price (USD)')
-
-            fig.canvas.mpl_connect('key_release_event', switch_figure_if_left_or_right)
-    """
-
     current_index = 0
+
+    # TODO FIX SUBPlOT SWITCHING
+
+    fig, subplots = plt.subplots(2)
 
     def plot_index(index=current_index):
         nonlocal tuple_list
-        row = tuple_list[index]
-        plt.gcf().canvas.set_window_title(row[0])
+        nonlocal fig
+        nonlocal subplots
+
+        row = tuple_list[index]        
+
+        fig.canvas.set_window_title(row[0])
         # plt.xticks(rotation=45)
-        plt.ylim([0, price_upper_thresh * 1.50])
-        plt.plot(row[4], row[2], label=row[0], linewidth=2, marker='o')
-        top = True
-        for time, price, volume in zip(row[4], row[2], row[3]):
-            plt.text(time, price + (20 if top else -20), volume, fontsize=9)
-            top = not top
-        plt.gcf().autofmt_xdate()
+
+        subplots[0].title.set_text('Volume')
+        subplots[1].title.set_text('Price')
+
+        subplots[1].set_ylim([0, price_upper_thresh * 1.50])
+        # subplots[1].margins(0.05)
+        subplots[1].plot(row[4], row[2], label=row[0], linewidth=2, marker='o', clip_on=False)
+
+        subplots[0].plot(row[4], row[3], linewidth=2, marker='o', clip_on=True)
+        # subplots[0].set_ylim(bottom=-0.50)
+        subplots[0].set_ymargin(1.0)
+
+        fig.autofmt_xdate()
+
+        plt.tight_layout(h_pad=2.5)
 
     def plot_before_or_after(event):
         nonlocal current_index
@@ -94,7 +75,8 @@ def plot_items(tuple_list=None):
             current_index -= 1
             if current_index < 0:
                 current_index = len(tuple_list) + current_index
-        plt.clf()
+        subplots[0].clear()
+        subplots[1].clear()
         plot_index(current_index)
         plt.draw()
     # generate_or_get(plt.gcf().number, True)
