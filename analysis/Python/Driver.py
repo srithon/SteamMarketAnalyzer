@@ -42,7 +42,7 @@ for item in item_names:
 		action = Analysis.suggested_action(prices, fluc)
 
 		if action != Analysis.Action.IGNORE:
-			shortlist.append( (item, fluc, prices, volume, [entry[2] for entry in entries], action) )
+			shortlist.append( (item, fluc, prices, [entry[0] for entry in entries], [entry[2] for entry in entries], action) )
 
 shortlist.sort(key=absolute_value_of_nth_element_in_tuple_callable(1), reverse=True)
 

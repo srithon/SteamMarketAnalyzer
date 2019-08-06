@@ -80,6 +80,10 @@ def plot_items(tuple_list=None):
         # plt.xticks(rotation=45)
         plt.ylim([0, price_upper_thresh * 1.50])
         plt.plot(row[4], row[2], label=row[0], linewidth=2, marker='o')
+        top = True
+        for time, price, volume in zip(row[4], row[2], row[3]):
+            plt.text(time, price + (20 if top else -20), volume, fontsize=9)
+            top = not top
         plt.gcf().autofmt_xdate()
 
     def plot_before_or_after(event):
