@@ -6,7 +6,6 @@ import sys
 sys.path.append(r'filldb')
 from FillDBInterface import FillDBInterface
 
-
 class Application(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master)
@@ -77,11 +76,11 @@ class FillDBFrame(tk.Frame):
                 self.verbose_on_off_button.configure(text='Verbose On')
         
     
-    def start_filling_db(self):
+    def start_filling_db(self, controller_thread=None):
         self.start_stop_button.configure(text=datetime.now().strftime('%m/%d %H:%M:%S'), command=self.stop_filling_db)
         print('Start filldb?')
         if all(x for x in (self.num_workers_field.get_full(), self.appid_field.get_full(), self.output_table_name_field.get_full(), self.input_table_name_field.get_full())):
-            self.main_controller_thread = threading.Thread(name='Main FillDB Controller Thread', target=self.start_filling_db_internal)
+            self.main_controller_thread = controller_thread if controller_thread is not None else threading.Thread(name='Main FillDB Controller Thread', target=self.start_filling_db_internal)
             self.main_controller_thread.start()
     
     def start_filling_db_internal(self):
@@ -143,6 +142,7 @@ class Logs(tk.Text):
     def append(self, text):
         self.insert('end', text)
 
-root = tk.Tk()
-app = Application(root)
-root.mainloop()
+if __name__ == '__main__':
+    root = tk.Tk()
+    app = Application(root)
+    root.mainloop()
