@@ -34,8 +34,11 @@ class Controller:
     def display_stats(self):
         for index, worker in enumerate(self.workers):
             print(f'Worker #{index}: {worker.counter}')
-        print('Total: {}'.format(sum([worker.counter for worker in self.workers])))
-        print(f'Time Elapsed Since Start: {time() - self.start_time} seconds')
+        total = sum([worker.counter for worker in self.workers])
+        print(f'Total: {total}')
+        time_elapsed = time() - self.start_time
+        print(f'Time Elapsed Since Start: {time_elapsed} seconds')
+        print(f'Average time per item: {time_elapsed / total}')
     
     def shutdown(self):    
         print('Shutting down controller...')
