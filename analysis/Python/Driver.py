@@ -1,8 +1,13 @@
 import Analysis
 import Trend
 import psycopg2
+import sys
 
-table_name = 'tf2'
+if len(sys.argv) < 2:
+	print('Please specify a tablename!')
+	raise SystemExit()
+
+table_name = sys.argv[1]
 
 def absolute_value_of_nth_element_in_tuple_callable(n):
 	def g(tuple):

@@ -3,6 +3,8 @@ from enum import Enum
 
 from matplotlib import pyplot as plt
 
+import math
+
 price_upper_thresh = 150
 price_lower_thresh = 45
 
@@ -54,10 +56,20 @@ def plot_items(tuple_list=None):
 
         subplots[0].title.set_text('Volume')
         subplots[1].title.set_text('Price')
-
-        subplots[1].set_ylim([0, price_upper_thresh * 1.50])
         # subplots[1].margins(0.05)
+        
+        min, max = min_and_max(row[2])
+        dist_from_min_and_max = ((max - min) * 0.75)
+        min -= dist_from_min_and_max
+        if min < 0:
+            min = 0
+        subplots[1].set_ylim([min, max + dist_from_min_and_max])
+        
         subplots[1].plot(row[4], row[2], label=row[0], linewidth=2, marker='o', clip_on=False)
+        # subplots[0].set_ymargin(1.0)
+        
+        subplots[1].text(0.3, 1.0, f'{row[-1]}: {row[1]:.3f}', horizontalalignment='center', 
+        verticalalignment='center', transform=subplots[1].transAxes)
 
         subplots[0].plot(row[4], row[3], linewidth=2, marker='o', clip_on=True)
         # subplots[0].set_ylim(bottom=-0.50)
@@ -84,6 +96,18 @@ def plot_items(tuple_list=None):
     plot_index()
     plt.gcf().canvas.mpl_connect('key_release_event', plot_before_or_after)
     plt.show()
+
+def min_and_max(iterable):
+    min = math.inf
+    max = -math.inf
+    
+    for a in iterable:
+        if a > max:
+            max = a
+        elif a < min:
+            min = a
+    
+    return (min, max)
 
 """
 suggestedAction volume (x:xs)
