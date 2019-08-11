@@ -37,27 +37,31 @@ Be able to switch between different plots
 """
 def plot_items(tuple_list=None):
     plt.style.use('fivethirtyeight')
-    # sub_plots = list()
 
     current_index = 0
 
-    # TODO FIX SUBPlOT SWITCHING
-
     fig, subplots = plt.subplots(2)
 
-    def plot_index(index=current_index):
+    buy_count = 0
+    sell_count = 0
+
+    for tup in tuple_list:
+        if tup[5] == Action.BUY:
+            buy_count += 1
+        else:
+            sell_count += 1
+
+    def plot_index(current_index=current_index):
         nonlocal tuple_list
         nonlocal fig
         nonlocal subplots
 
-        row = tuple_list[index]        
+        row = tuple_list[current_index]        
 
         fig.canvas.set_window_title(row[0])
-        # plt.xticks(rotation=45)
 
         subplots[0].title.set_text('Volume')
         subplots[1].title.set_text('Price')
-        # subplots[1].margins(0.05)
         
         min, max = min_and_max(row[2])
         dist_from_min_and_max = ((max - min) * 0.75)
@@ -67,13 +71,11 @@ def plot_items(tuple_list=None):
         subplots[1].set_ylim([min, max + dist_from_min_and_max])
         
         subplots[1].plot(row[4], row[2], label=row[0], linewidth=2, marker='o', clip_on=False)
-        # subplots[0].set_ymargin(1.0)
         
         subplots[1].text(0.3, 1.0, f'{row[-1]}: {row[1]:.3f}', horizontalalignment='center', 
         verticalalignment='center', transform=subplots[1].transAxes)
 
         subplots[0].plot(row[4], row[3], linewidth=2, marker='o', clip_on=True)
-        # subplots[0].set_ylim(bottom=-0.50)
         subplots[0].set_ymargin(1.0)
 
         fig.autofmt_xdate()
@@ -82,12 +84,40 @@ def plot_items(tuple_list=None):
 
     def plot_before_or_after(event):
         nonlocal current_index
+        nonlocal buy_count
+        nonlocal sell_count
+
         if event.key == 'right':
             current_index = (current_index + 1) % len(tuple_list)
         elif event.key == 'left':
             current_index -= 1
             if current_index < 0:
                 current_index = len(tuple_list) + current_index
+        elif event.key == 'up':
+            if buy_count < 2:
+                return
+            current_index += 1
+
+            if current_index == len(tuple_list):
+                current_index = 0
+
+            while tuple_list[current_index][5] != Action.BUY:
+                current_index += 1
+                if current_index == len(tuple_list):
+                    current_index = 0
+        elif event.key == 'down':
+            if sell_count < 2:
+                return
+            current_index += 1
+
+            if current_index == len(tuple_list):
+                current_index = 0
+
+            while tuple_list[current_index][5] != Action.SELL:
+                current_index += 1
+                if current_index == len(tuple_list):
+                    current_index = 0
+
         subplots[0].clear()
         subplots[1].clear()
         plot_index(current_index)
