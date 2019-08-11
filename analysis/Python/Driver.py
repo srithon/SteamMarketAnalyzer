@@ -9,6 +9,10 @@ if len(sys.argv) < 2:
 
 table_name = sys.argv[1]
 
+if ';' in table_name:
+	print('Why is there a semicolon in the table name? -_-')
+	sys.exit()
+
 def absolute_value_of_nth_element_in_tuple_callable(n):
 	def g(tuple):
 		return abs(tuple[n])
@@ -23,8 +27,23 @@ with open('C:/Development/SteamMarketAnalyzer/password.txt', 'r') as password_fi
 								port=7538)
 
 cursor = connection.cursor()
-cursor.execute(f'SELECT DISTINCT name FROM {table_name}')
-item_names = [item[0] for item in cursor.fetchall()]
+cursor.execute(
+	'WITH all_entries AS ('
+	'	SELECT *,'
+	'	ROW_NUMBER() OVER (PARTITION BY name ORDER BY time DESC) row_num'
+	f'	FROM {table_name}'
+	'),'
+	'eligible_items AS ('
+	'	SELECT name FROM all_entries '
+	'	WHERE row_num = 1 AND volume > %s '
+	'	AND price > %s AND price < %s'
+	')'
+	f' SELECT name, price, volume, time FROM {table_name} WHERE name IN (SELECT name FROM eligible_items) ORDER BY name DESC, time DESC',
+	(Analysis.volume_thresh, Analysis.price_lower_thresh, Analysis.price_upper_thresh))
+
+rows = cursor.fetchall()
+cursor.close()
+connection.close()
 
 """
 GOAL
@@ -34,20 +53,28 @@ Plot the top n items
 
 shortlist = list()
 
-for item in item_names:
-	cursor.execute(f'SELECT volume, price, time FROM {table_name} WHERE name=%s ORDER BY time DESC', (item,))
-	entries = cursor.fetchall()
+current_index = 0
 
-	volume = entries[0][0]
+# name price volume time
 
-	if Analysis.check_volume(volume) and Analysis.check_price(entries[0][1]):
-		prices = [entry[1] for entry in entries]
+while current_index < len(rows):
+	entries = list()
 
-		fluc = Trend.fluctuationFirstToRest(prices)
-		action = Analysis.suggested_action(prices, fluc)
+	current_item_name = rows[current_index][0]
 
-		if action != Analysis.Action.IGNORE:
-			shortlist.append( (item, fluc, prices, [entry[0] for entry in entries], [entry[2] for entry in entries], action) )
+	while current_index < len(rows) and rows[current_index][0] == current_item_name:
+		entries.append(rows[current_index])
+		current_index += 1
+
+	prices = [entry[1] for entry in entries]
+
+	fluc = Trend.fluctuationFirstToRest(prices)
+	action = Analysis.suggested_action(prices, fluc)
+
+	if action != Analysis.Action.IGNORE:
+		shortlist.append( (current_item_name, fluc, prices, [entry[2] for entry in entries], [entry[3] for entry in entries], action) )
+	
+	entries.clear()
 
 shortlist.sort(key=absolute_value_of_nth_element_in_tuple_callable(1), reverse=True)
 

@@ -7,6 +7,7 @@ import math
 
 price_upper_thresh = 150
 price_lower_thresh = 45
+volume_thresh = 6
 
 class Action(Enum):
     BUY, SELL, IGNORE = range(3)
@@ -21,7 +22,7 @@ def suggested_action(prices, fluctuation=None):
         return Action.BUY
 
 def check_volume(volume):
-    return volume > 6
+    return volume > volume_thresh
 
 def check_price(price):
     return price < price_upper_thresh and price > price_lower_thresh

@@ -21,8 +21,8 @@ def check_finished():
 def wait_for_finish():
     while not check_finished():
         print(f'Waiting... {sys.argv}')
-        sleep(900)
-        # 15 minutes
+        sleep(300)
+        # 5 minutes
 
 if __name__ == '__main__':
     if len(sys.argv) < 4:
