@@ -12,11 +12,15 @@ import threading
 import requests
 
 class ProxyList:
-    initial_url = 'https://free-proxy-list.net/anonymous-proxy.html'
+    proxy_urls = ['https://us-proxy.org',
+                  'https://free-proxy-list.net/uk-proxy.html',
+                  'https://free-proxy-list.net/anonymous-proxy.html',
+                  'https://proxy.rudnkh.me/txt']
+
     pages_per_refresh = 2
 
     def __init__(self):
-        self.url = ProxyList.initial_url
+        self.proxy_id = 0
         self.proxy_page = 1
         self.proxies = list()
         self.lock = threading.Lock()
@@ -31,16 +35,17 @@ class ProxyList:
         if self.shutdown:
             raise SystemExit()
 
-        if self.url == 'https://proxy.rudnkh.me/txt':
+        # proxy.rudnkh.me/txt
+        if self.proxy_id == 3:
             s = requests.Session()
             try:
-                r = s.get(self.url, timeout=3.0)
+                r = s.get(ProxyList.proxy_urls[self.proxy_id], timeout=3.0)
                 for proxy in r.text.split('\n'):
                     self.proxies.append(proxy.rstrip())
             except:
                 return self.refresh_proxies()
             finally:
-                self.url = 'https://us-proxy.org'
+                self.proxy_id = 0
         else:
             while True:
                 try:
@@ -78,15 +83,9 @@ class ProxyList:
                     if not 'disabled' in next_button_container.get_attribute('class'):
                         next_button.click()
                     else:
-                        print(f'Changing proxy sites. Currently: {self.url}')
-                        if self.url == 'https://us-proxy.org':
-                            self.url = 'https://free-proxy-list.net/uk-proxy.html'
-                        elif self.url == 'https://free-proxy-list.net/uk-proxy.html':
-                            self.url = 'https://free-proxy-list.net/anonymous-proxy.html'
-                        elif self.url == 'https://free-proxy-list.net/anonymous-proxy.html':
-                            self.url = 'https://proxy.rudnkh.me/txt'
-                        else:
-                            self.url = 'https://us-proxy.org'
+                        url = ProxyList.proxy_urls[self.proxy_id]
+                        print(f'Changing proxy sites. Currently: {url}')
+                        self.proxy_id = (self.proxy_id + 1) % len(ProxyList.proxy_urls)
                         
                         self.proxy_page = 1
                         
