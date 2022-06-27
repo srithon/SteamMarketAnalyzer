@@ -9,19 +9,20 @@ where
 
     data Direction = Up | Down deriving (Show);
 
-    -- wI 5; 0.4 0.25 0.125 
-    weightingInterval :: Int -> Double
-    weightingInterval n = (fromIntegral 1) / fromIntegral (n + 1)
-
-    {-
-    This function returns an average of a list
-    such that the values towards the beginning are
-    given higher weighting than those at the end
-    -}
+    -- premise is that starting values get more weighting than ending values.
+    -- the way we accomplish this is by distributing weightings from the range [1..0] evenly across the list.
+    -- we can accomplish this by getting the interval: (1 / (n + 1)), and creating the weights by subtracting this from 1
     weightedAverage :: [Double] -> Double
-    weightedAverage (x:xs) =
-        (sum $ (zipWith(*) (x:xs) [1 - interval, (1 - (2 * interval)) .. 0])) / (fromIntegral(length xs + 1) / 2)
-        where interval = (weightingInterval ((length xs) + 1))
+    weightedAverage ls = (/ fromIntegral len) $ sum $ zipWith (*) ls $ weightingList len
+      where
+        len = length ls
+
+    -- given a list, yields the list of weightings to use.
+    -- did it this way so that the first one would not be 1.0
+    weightingList :: Int -> [Double]
+    weightingList len = take len $ drop 1 [1, 1 - interval ..]
+      where
+        interval = 1 / fromIntegral (len + 1)
 
     percentError :: Double -> Double -> Double
     percentError a b = ((a - b) / b) * 100
